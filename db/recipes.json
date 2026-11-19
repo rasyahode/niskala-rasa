@@ -1,0 +1,3499 @@
+{
+  "categories": [
+    {
+      "slug": "nusantara-sumatera",
+      "name": "Nusantara · Sumatera",
+      "blurb": "Rempah kaya santan, cabai, dan rimpang dari Aceh hingga Sumatera Selatan."
+    },
+    {
+      "slug": "nusantara-jawa",
+      "name": "Nusantara · Jawa",
+      "blurb": "Manis gurih bumbu dasar Jawa: kluwek, kencur, kemiri, dan gula merah."
+    },
+    {
+      "slug": "nusantara-jakarta-betawi",
+      "name": "Nusantara · Jakarta & Betawi",
+      "blurb": "Perpaduan rempah pesisir: pala, cengkeh, kayu manis, dan santan."
+    },
+    {
+      "slug": "nusantara-bali-nusa-tenggara",
+      "name": "Nusantara · Bali & Nusa Tenggara",
+      "blurb": "Basa genep Bali dan bumbu pedas Nusa Tenggara."
+    },
+    {
+      "slug": "nusantara-sulawesi-timur",
+      "name": "Nusantara · Sulawesi, Kalimantan & Timur",
+      "blurb": "Segar, asam, dan pedas dari Makassar, Manado, Banjar, hingga Papua."
+    },
+    {
+      "slug": "nusantara-nasional",
+      "name": "Nusantara · Hidangan Nasional",
+      "blurb": "Hidangan yang dikenal di seluruh Nusantara."
+    },
+    {
+      "slug": "asia-timur",
+      "name": "Asia Timur",
+      "blurb": "Jahe, lada Sichuan, bunga lawang, dan umami fermentasi."
+    },
+    {
+      "slug": "asia-selatan",
+      "name": "Asia Selatan",
+      "blurb": "Garam masala, kunyit, jintan, dan kapulaga."
+    },
+    {
+      "slug": "asia-tenggara",
+      "name": "Asia Tenggara",
+      "blurb": "Serai, lengkuas, daun jeruk, dan cabai khas Thailand-Vietnam."
+    },
+    {
+      "slug": "timur-tengah-afrika",
+      "name": "Timur Tengah & Afrika",
+      "blurb": "Saffron, sumac, ras el hanout, dan berbere."
+    },
+    {
+      "slug": "eropa-amerika",
+      "name": "Eropa, Amerika & Karibia",
+      "blurb": "Paprika asap, oregano, achiote, dan allspice."
+    }
+  ],
+  "recipes": [
+    {
+      "dataset_id": 1,
+      "name": "Rendang Daging Minang",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera)",
+      "country": "Indonesia",
+      "minutes": 180,
+      "difficulty": "Sulit",
+      "dominant_taste": "manis",
+      "spices": [
+        "Pala",
+        "Serai",
+        "Lengkuas",
+        "Kunyit",
+        "Daun Kunyit",
+        "Bunga Lawang",
+        "Cengkeh",
+        "Kayu Manis"
+      ],
+      "description": "Daging sapi yang dimasak perlahan dalam santan dan rempah kaya rempah hingga kering dan berwarna gelap.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Potong daging sapi searah serat menjadi ukuran sedang.",
+        "Haluskan bumbu rempah (pala, kunyit, lengkuas, cabai, bawang) menggunakan ulekan.",
+        "Peras santan kental dan cair dari kelapa segar.",
+        "Rebus santan cair bersama bumbu halus, serai, daun kunyit, dan asam kandis hingga mendidih.",
+        "Masukkan potongan daging, aduk perlahan dengan api sedang hingga minyak keluar (gulai).",
+        "Kecilkan api, aduk terus-menerus secara berkala hingga santan mengering, berubah warna kecokelatan, dan daging empuk (kalio hingga rendang)."
+      ],
+      "overview": [
+        "Potong daging sapi searah serat menjadi ukuran…",
+        "Haluskan bumbu rempah (pala kunyit lengkuas cabai…",
+        "Peras santan kental dan cair dari kelapa…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 2,
+      "name": "Soto Betawi Asli",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Nusantara (Jakarta)",
+      "country": "Indonesia",
+      "minutes": 90,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Pala",
+        "Cengkeh",
+        "Kayu Manis",
+        "Serai",
+        "Lengkuas",
+        "Jahe",
+        "Kemiri"
+      ],
+      "description": "Sup daging sapi berkuah santan dan susu dengan aroma rempah hangat yang khas.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau jeroan sapi hingga empuk, potong-potong, saring kaldunya.",
+        "Haluskan bumbu rempah (pala, cengkeh, kayu manis, jahe, bawang).",
+        "Tumis bumbu halus bersama serai dan daun salam hingga harum.",
+        "Campurkan tumisan bumbu ke dalam air kaldu, tambahkan santan encer dan susu cair.",
+        "Masak dengan api sedang sambil diaduk agar santan tidak pecah.",
+        "Sajikan dengan taburan bawang goreng, emping, dan irisan tomat."
+      ],
+      "overview": [
+        "Rebus daging atau jeroan sapi hingga empuk…",
+        "Haluskan bumbu rempah (pala cengkeh kayu manis…",
+        "Tumis bumbu halus bersama serai dan daun…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 3,
+      "name": "Rawon Surabaya",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Timur)",
+      "country": "Indonesia",
+      "minutes": 120,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kluwek",
+        "Kencur",
+        "Ketumbar",
+        "Lengkuas",
+        "Serai",
+        "Daun Jeruk"
+      ],
+      "description": "Sup daging sapi hitam legendaris yang menggunakan kluwek sebagai pemberi warna dan rasa gurih pekat.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging sapi hingga setengah empuk, potong dadu, lalu sisihkan kaldunya.",
+        "Sangrai dan haluskan kluwek bersama bawang merah, bawang putih, ketumbar, kencur, dan lengkuas.",
+        "Tumis bumbu halus bersama daun jeruk, serai, dan lengkuas hingga harum dan matang.",
+        "Masukkan bumbu tumis ke dalam air kaldu mendidih berisi potongan daging.",
+        "Masak dengan api kecil hingga daging benar-benar empuk dan bumbu meresap sempurna.",
+        "Sajikan hangat dengan pelengkap tauge pendek, sambal terasi, telur asin, dan jeruk nipis."
+      ],
+      "overview": [
+        "Rebus daging sapi hingga setengah empuk potong…",
+        "Sangrai dan haluskan kluwek bersama bawang merah…",
+        "Tumis bumbu halus bersama daun jeruk serai…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 4,
+      "name": "Ayam Betutu Bali",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Nusantara (Bali)",
+      "country": "Indonesia",
+      "minutes": 150,
+      "difficulty": "Sulit",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Basa Genep (Kunyit, Jahe, Lengkuas, Kencur, Serai, Kemiri, Cabai, Terasi)"
+      ],
+      "description": "Ayam utuh yang dibumbui rempah lengkap khas Bali lalu dipanggang dalam sekam atau oven perlahan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Siapkan ayam utuh yang telah dibersihkan.",
+        "Haluskan bumbu 'Basa Genep' (kunyit, jahe, lengkuas, kencur, terasi, cabai, serai) secara kasar.",
+        "Tumis sebagian bumbu hingga harum, lalu campurkan sisanya dengan minyak kelapa mentah.",
+        "Baluri seluruh permukaan dan rongga perut ayam dengan bumbu hingga merata.",
+        "Bungkus rapat ayam dengan daun pisang atau masukkan ke dalam wadah tahan panas.",
+        "Panggang atau kukus dalam suhu rendah selama 2 hingga 3 jam hingga daging ayam sangat empuk dan bumbu meresap."
+      ],
+      "overview": [
+        "Siapkan ayam utuh yang telah dibersihkan.",
+        "Haluskan bumbu 'Basa Genep' (kunyit jahe lengkuas…",
+        "Tumis sebagian bumbu hingga harum lalu campurkan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 5,
+      "name": "Arsik Ikan Mas",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera Utara)",
+      "country": "Indonesia",
+      "minutes": 60,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Andaliman",
+        "Kecombrang",
+        "Lengkuas",
+        "Kunyit",
+        "Serai",
+        "Kemiri"
+      ],
+      "description": "Ikan mas bumbu kuning khas Batak dengan sensasi kebas yang unik dari andaliman.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Lumuri ikan/daging dengan air jeruk nipis dan garam.",
+        "Haluskan bumbu spesifik termasuk andaliman, kecombrang, kunyit, dan rias (torch ginger).",
+        "Susun serai dan asam potong di dasar wajan, letakkan ikan/daging di atasnya.",
+        "Tuang bumbu halus yang telah dicairkan dengan sedikit air ke atas ikan/daging.",
+        "Masak dengan api kecil tertutup hingga air menyusut dan bumbu mengental meresap.",
+        "Angkat perlahan agar bentuk ikan/daging tidak hancur."
+      ],
+      "overview": [
+        "Lumuri ikan/daging dengan air jeruk nipis dan…",
+        "Haluskan bumbu spesifik termasuk andaliman kecombrang kunyit…",
+        "Susun serai dan asam potong di dasar…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 6,
+      "name": "Saksang Babi/Daging",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera Utara)",
+      "country": "Indonesia",
+      "minutes": 75,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Andaliman",
+        "Serai",
+        "Lengkuas",
+        "Jeruk Purut",
+        "Ketumbar"
+      ],
+      "description": "Olahan daging cincang khas Batak yang dimasak dengan rempah kaya dan andaliman berlimpah.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Lumuri ikan/daging dengan air jeruk nipis dan garam.",
+        "Haluskan bumbu spesifik termasuk andaliman, kecombrang, kunyit, dan rias (torch ginger).",
+        "Susun serai dan asam potong di dasar wajan, letakkan ikan/daging di atasnya.",
+        "Tuang bumbu halus yang telah dicairkan dengan sedikit air ke atas ikan/daging.",
+        "Masak dengan api kecil tertutup hingga air menyusut dan bumbu mengental meresap.",
+        "Angkat perlahan agar bentuk ikan/daging tidak hancur."
+      ],
+      "overview": [
+        "Lumuri ikan/daging dengan air jeruk nipis dan…",
+        "Haluskan bumbu spesifik termasuk andaliman kecombrang kunyit…",
+        "Susun serai dan asam potong di dasar…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=422"
+    },
+    {
+      "dataset_id": 7,
+      "name": "Gulai Ikan Patin",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Riau)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Mudah",
+      "dominant_taste": "asam",
+      "spices": [
+        "Kunyit",
+        "Serai",
+        "Lengkuas",
+        "Asam Kandis",
+        "Daun Ruku-Ruku"
+      ],
+      "description": "Gulai ikan berkuah kuning cerah dengan paduan rasa asam dan pedas segar.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Gulai Ikan Patin.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 8,
+      "name": "Nasi Kuning Keraton",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa)",
+      "country": "Indonesia",
+      "minutes": 60,
+      "difficulty": "Mudah",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Kunyit",
+        "Serai",
+        "Daun Salam",
+        "Daun Pandan",
+        "Santan"
+      ],
+      "description": "Nasi harum berwarna kuning cerah yang dimasak dengan ekstrak kunyit dan rempah aromatik.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Beras Basmati/Pulen, Minyak samin/Margarine, Kaldu, Garam",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Nasi Kuning Keraton.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 9,
+      "name": "Soto Madura",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Timur)",
+      "country": "Indonesia",
+      "minutes": 90,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Lengkuas",
+        "Kemiri",
+        "Serai",
+        "Daun Jeruk"
+      ],
+      "description": "Soto daging sapi bening kekuningan dengan aroma harum rempah rimpang dan kuah gurih.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 10,
+      "name": "Pecel Madiun",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Timur)",
+      "country": "Indonesia",
+      "minutes": 30,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kencur",
+        "Daun Jeruk",
+        "Cabai Rawit",
+        "Kacang Tanah",
+        "Gula Aren"
+      ],
+      "description": "Aneka sayuran rebus yang disiram bumbu kacang beraroma kencur dan daun jeruk yang kuat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Aneka sayuran segar, Santan/Kacang tanah, Garam, Gula",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Pecel Madiun.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 11,
+      "name": "Karedok Sunda",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Barat)",
+      "country": "Indonesia",
+      "minutes": 20,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kencur",
+        "Terasi",
+        "Cabai Rawit",
+        "Kacang Tanah",
+        "Air Asam Jawa"
+      ],
+      "description": "Salad sayuran mentah segar khas Sunda dengan bumbu kacang kencur yang menyegarkan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Karedok Sunda.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=132"
+    },
+    {
+      "dataset_id": 12,
+      "name": "Seblak Ceker Jeletot",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Barat)",
+      "country": "Indonesia",
+      "minutes": 25,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kencur",
+        "Bawang Putih",
+        "Cabai Rawit Merah"
+      ],
+      "description": "Kerupuk basah kenyal dengan kuah kental beraroma kencur yang kuat dan pedas membakar.",
+      "tools": "Wajan penggorengan, Sutil, Kompor, Pisau, Talenan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Seblak Ceker Jeletot.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=214"
+    },
+    {
+      "dataset_id": 13,
+      "name": "Ayam Taliwang Lombok",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Nusantara (Nusa Tenggara)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kencur",
+        "Cabai Merah Besar",
+        "Terasi Bakar",
+        "Bawang Putih"
+      ],
+      "description": "Ayam bakar khas Lombok dengan olesan bumbu cabai dan kencur yang sangat kaya rasa.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Ayam Taliwang Lombok.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 14,
+      "name": "Sop Buntut Sapi",
+      "category": "nusantara-nasional",
+      "region": "Nusantara (Nasional)",
+      "country": "Indonesia",
+      "minutes": 150,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Pala",
+        "Cengkeh",
+        "Kayu Manis",
+        "Lada Putih"
+      ],
+      "description": "Sup buntut sapi empuk dengan kuah bening beraroma pala dan cengkeh yang menghangatkan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sop Buntut Sapi.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 15,
+      "name": "Opor Ayam Kuning",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa)",
+      "country": "Indonesia",
+      "minutes": 50,
+      "difficulty": "Mudah",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Kunyit",
+        "Kemiri",
+        "Ketumbar",
+        "Serai",
+        "Lengkuas",
+        "Daun Salam"
+      ],
+      "description": "Olahan ayam berkuah santan gurih berwarna kuning dengan aroma rempah tradisional yang lembut.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Opor Ayam Kuning.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 16,
+      "name": "Semur Daging Sapi Betawi",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Nusantara (Jakarta)",
+      "country": "Indonesia",
+      "minutes": 90,
+      "difficulty": "Mudah",
+      "dominant_taste": "manis",
+      "spices": [
+        "Pala",
+        "Cengkeh",
+        "Kayu Manis",
+        "Kecap Manis",
+        "Bawang Merah"
+      ],
+      "description": "Daging sapi empuk yang dimasak dalam kuah kecap manis pekat beraroma pala dan cengkeh.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Semur Daging Sapi Betawi.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=319"
+    },
+    {
+      "dataset_id": 17,
+      "name": "Sayur Lodeh Jawa",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa)",
+      "country": "Indonesia",
+      "minutes": 40,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Lengkuas",
+        "Kemiri",
+        "Daun Salam",
+        "Terasi",
+        "Santan"
+      ],
+      "description": "Sayuran aneka jenis dalam kuah santan gurih beraroma lengkuas dan daun salam.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Aneka sayuran segar, Santan/Kacang tanah, Garam, Gula",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sayur Lodeh Jawa.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 18,
+      "name": "Sambal Matah Bali",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Nusantara (Bali)",
+      "country": "Indonesia",
+      "minutes": 15,
+      "difficulty": "Mudah",
+      "dominant_taste": "asam",
+      "spices": [
+        "Kecombrang",
+        "Serai",
+        "Bawang Merah",
+        "Cabai Rawit",
+        "Minyak Kelapa"
+      ],
+      "description": "Sambal mentah segar khas Bali dengan irisan kecombrang dan serai yang sangat wangi.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sambal Matah Bali.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=988"
+    },
+    {
+      "dataset_id": 19,
+      "name": "Pecak Ikan Gurame",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Nusantara (Betawi)",
+      "country": "Indonesia",
+      "minutes": 40,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Kencur",
+        "Kecombrang",
+        "Air Jeruk Limau"
+      ],
+      "description": "Ikan goreng gurame yang disiram kuah pecak hangat dengan aroma jahe dan kencur yang kuat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Pecak Ikan Gurame.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 20,
+      "name": "Gudeg Jogja",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Yogyakarta)",
+      "country": "Indonesia",
+      "minutes": 360,
+      "difficulty": "Sulit",
+      "dominant_taste": "manis",
+      "spices": [
+        "Gula Aren",
+        "Lengkuas",
+        "Daun Salam",
+        "Ketumbar",
+        "Kemiri",
+        "Santan"
+      ],
+      "description": "Nangka muda yang dimasak berjam-jam dengan gula aren dan rempah hingga manis legit dan empuk.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Gudeg Jogja.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 21,
+      "name": "Bubur Ayam Cirebon",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Barat)",
+      "country": "Indonesia",
+      "minutes": 60,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Kemiri",
+        "Ketumbar",
+        "Serai",
+        "Jahe (untuk kuah kuning)"
+      ],
+      "description": "Bubur beras lembut disajikan dengan suwiran ayam, kuah kuning kaya rempah, dan kacang kedelai.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Bubur Ayam Cirebon.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 22,
+      "name": "Pempek Palembang",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera Selatan)",
+      "country": "Indonesia",
+      "minutes": 90,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Bawang Putih",
+        "Asam Jawa",
+        "Gula Aren",
+        "Cabai Rawit (untuk Cuko)"
+      ],
+      "description": "Olahan ikan dan sagu kenyal disajikan dengan kuah cuko asam pedas manis beraroma bawang putih.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Pempek Palembang.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 23,
+      "name": "Mie Aceh Kuah",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Aceh)",
+      "country": "Indonesia",
+      "minutes": 40,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kapulaga",
+        "Jintan",
+        "Ketumbar",
+        "Kunyit",
+        "Bawang Putih",
+        "Cabai Merah"
+      ],
+      "description": "Mie kuning tebal dengan kuah kari kental beraroma rempah kuat khas tanah rencong.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Mie Aceh Kuah.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=314"
+    },
+    {
+      "dataset_id": 24,
+      "name": "Ikan Asam Padeh Minang",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera Barat)",
+      "country": "Indonesia",
+      "minutes": 35,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Asam Jawa",
+        "Kunyit",
+        "Jahe",
+        "Lengkuas",
+        "Serai",
+        "Cabai Merah"
+      ],
+      "description": "Olahan ikan berkuah merah menyala tanpa santan dengan dominasi rasa asam segar dan pedas.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Ikan Asam Padeh Minang.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 25,
+      "name": "Nasi Liwet Solo",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Tengah)",
+      "country": "Indonesia",
+      "minutes": 50,
+      "difficulty": "Sedang",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Serai",
+        "Daun Salam",
+        "Lengkuas",
+        "Santan Kelapa"
+      ],
+      "description": "Nasi gurih harum yang dimasak dengan santan dan rempah daun, disajikan dengan suwiran ayam dan opor.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Beras Basmati/Pulen, Minyak samin/Margarine, Kaldu, Garam",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Nasi Liwet Solo.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 26,
+      "name": "Pepes Ikan Mas Kemangi",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Barat)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Kemiri",
+        "Serai",
+        "Daun Kemangi",
+        "Daun Pisang"
+      ],
+      "description": "Ikan bumbu rempah kuning yang dicampur daun kemangi segar lalu dibungkus daun pisang dan dikukus/dibakar.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Pepes Ikan Mas Kemangi.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 27,
+      "name": "Soto Banjar",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Kalimantan Selatan)",
+      "country": "Indonesia",
+      "minutes": 80,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kayu Manis",
+        "Cengkeh",
+        "Kapulaga",
+        "Pala",
+        "Susu Cair"
+      ],
+      "description": "Soto ayam berkuah bening kekuningan dengan aroma rempah kayu manis dan cengkeh yang harum.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 28,
+      "name": "Coto Makassar",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Selatan)",
+      "country": "Indonesia",
+      "minutes": 120,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kacang Tanah Sangrai",
+        "Serai",
+        "Lengkuas",
+        "Jahe",
+        "Ketumbar",
+        "Jintan"
+      ],
+      "description": "Sup jeroan dan daging sapi khas Makassar dengan kuah gurih pekat berbahan dasar kacang tanah.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 29,
+      "name": "Pallubasa Makassar",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Selatan)",
+      "country": "Indonesia",
+      "minutes": 90,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kelapa Parut Sangrai (Srundeng)",
+        "Lengkuas",
+        "Serai",
+        "Ketumbar"
+      ],
+      "description": "Hidangan daging sapi berkuah kental khas Makassar yang diperkaya dengan kelapa sangrai.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=560"
+    },
+    {
+      "dataset_id": 30,
+      "name": "Sup Konro Makassar",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Selatan)",
+      "country": "Indonesia",
+      "minutes": 150,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kluwek",
+        "Ketumbar",
+        "Jintan",
+        "Kayu Manis",
+        "Cengkeh",
+        "Pala"
+      ],
+      "description": "Sup iga sapi berkuah gelap kaya rempah dengan sentuhan kluwek dan rempah hangat.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 31,
+      "name": "Ikan Bakar Jimbaran",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Nusantara (Bali)",
+      "country": "Indonesia",
+      "minutes": 40,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Bumbu Bali (Kunyit, Jahe, Lengkuas, Terasi, Kemiri, Cabai)"
+      ],
+      "description": "Ikan segar bakar arang dengan olesan bumbu kuning khas Bali yang manis, gurih, dan pedas.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Ikan Bakar Jimbaran.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 32,
+      "name": "Ayam Rica-Rica Manado",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Utara)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Jahe",
+        "Serai",
+        "Daun Jeruk",
+        "Cabai Rawit Merah",
+        "Daun Kemangi"
+      ],
+      "description": "Olahan ayam pedas menyengat khas Manado dengan dominasi aroma jahe, serai, dan kemangi.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Ayam Rica-Rica Manado.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 33,
+      "name": "Woku Belanga Ikan",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Utara)",
+      "country": "Indonesia",
+      "minutes": 40,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Serai",
+        "Daun Jeruk",
+        "Daun Pandan",
+        "Daun Kemangi"
+      ],
+      "description": "Ikan masak kuah kuning kaya rempah daun khas Manado yang sangat wangi dan segar.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Woku Belanga Ikan.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 34,
+      "name": "Tinutuan (Bubur Manado)",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Nusantara (Sulawesi Utara)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Mudah",
+      "dominant_taste": "asam",
+      "spices": [
+        "Labu Kuning",
+        "Singkong",
+        "Bayam",
+        "Kangkung",
+        "Kemangi",
+        "Serai"
+      ],
+      "description": "Bubur sehat kaya sayuran khas Manado dengan aroma kemangi dan serai yang menggugah selera.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Tinutuan (Bubur Manado).",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 35,
+      "name": "Soto Kudus",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Tengah)",
+      "country": "Indonesia",
+      "minutes": 60,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Kemiri",
+        "Jahe",
+        "Kunyit",
+        "Bawang Putih",
+        "Jintan"
+      ],
+      "description": "Soto ayam berkuah bening gurih khas Kudus, disajikan dalam mangkuk kecil dengan tauge.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 36,
+      "name": "Tongseng Kambing",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Tengah)",
+      "country": "Indonesia",
+      "minutes": 60,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Lengkuas",
+        "Serai",
+        "Kapulaga",
+        "Kecap Manis",
+        "Kol"
+      ],
+      "description": "Olahan daging kambing berkuah santan encer dan kecap manis dengan irisan kol segar dan tomat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Tongseng Kambing.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=989"
+    },
+    {
+      "dataset_id": 37,
+      "name": "Sate Madura Asli",
+      "category": "nusantara-jawa",
+      "region": "Nusantara (Jawa Timur)",
+      "country": "Indonesia",
+      "minutes": 50,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Kacang Tanah",
+        "Kemiri",
+        "Bawang Putih",
+        "Kecap Manis",
+        "Jeruk Limau"
+      ],
+      "description": "Sate ayam bakar arang dengan bumbu kacang gurih manis dan taburan bawang goreng.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sate Madura Asli.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 38,
+      "name": "Sate Padang Panjang",
+      "category": "nusantara-sumatera",
+      "region": "Nusantara (Sumatera Barat)",
+      "country": "Indonesia",
+      "minutes": 70,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Lengkuas",
+        "Serai",
+        "Jintan",
+        "Tepung Beras (untuk kuah kental)"
+      ],
+      "description": "Sate daging/lidah sapi dengan kuah sate kental berwarna kuning kecokelatan yang kaya rempah.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sate Padang Panjang.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 39,
+      "name": "Sate Lilit Bali",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Nusantara (Bali)",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Basa Genep (Kunyit, Serai, Lengkuas, Daun Jeruk, Santan)"
+      ],
+      "description": "Daging cincang yang dililitkan pada batang serai lalu dibakar harum dengan bumbu rempah Bali.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Sate Lilit Bali.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 40,
+      "name": "Kolak Pisang Manis",
+      "category": "nusantara-nasional",
+      "region": "Nusantara (Nasional)",
+      "country": "Indonesia",
+      "minutes": 30,
+      "difficulty": "Mudah",
+      "dominant_taste": "manis",
+      "spices": [
+        "Gula Aren",
+        "Daun Pandan Wangi",
+        "Santan Kelapa"
+      ],
+      "description": "Hidangan penutup manis berupa pisang dan ubi dalam kuah santan gula aren beraroma pandan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Persiapan Bahan: Siapkan bahan utama dan cuci bersih semua rempah yang diperlukan untuk Kolak Pisang Manis.",
+        "Ulek/Blender Bumbu: Haluskan bumbu rempah utama bersama bawang merah dan bawang putih hingga lembut.",
+        "Tumis Aromatik: Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, serai, atau lengkuas hingga harum matang.",
+        "Masak Utama: Masukkan bahan utama (daging/ikan/sayur/mie), aduk rata dengan bumbu tumis.",
+        "Kuah/Pematangan: Tambahkan air, santan, atau kaldu secukupnya, bumbui dengan garam dan gula, masak hingga empuk dan meresap.",
+        "Penyajian: Cicipi dan koreksi rasa, angkat lalu sajikan selagi hangat dengan taburan pelengkap."
+      ],
+      "overview": [
+        "Persiapan Bahan",
+        "Ulek/Blender Bumbu",
+        "Tumis Aromatik"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 41,
+      "name": "Chicken Biryani Hyderabadi",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (India)",
+      "country": "India",
+      "minutes": 90,
+      "difficulty": "Sulit",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kapulaga Hijau",
+        "Jintan",
+        "Cengkeh",
+        "Kayu Manis",
+        "Saffron",
+        "Garam Masala"
+      ],
+      "description": "Nasi basmati aromatik berlapis ayam berbumbu rempah kaya dan saffron yang dimasak tertutup.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Beras Basmati/Pulen, Minyak samin/Margarine, Kaldu, Garam",
+      "steps": [
+        "Rendam beras basmati selama 30 menit, lalu rebus setengah matang bersama rempah utuh (kapulaga, kayu manis, cengkeh) dan tiriskan.",
+        "Marinasi daging dengan yogurt, bubuk cabai, garam, dan rempah garam masala.",
+        "Tumis bawang bombay hingga karamel, masukkan daging marinasi hingga berubah warna.",
+        "Susun nasi setengah matang di atas tumisan daging, beri percikan air saffron dan mentega di atasnya.",
+        "Tutup panci rapat-rapat (sealed dengan adonan tepung jika perlu) dan masak dengan metode dum (api sangat kecil) selama 40 menit.",
+        "Aduk perlahan saat disajikan agar warna nasi tercampur cantik."
+      ],
+      "overview": [
+        "Rendam beras basmati selama 30 menit lalu…",
+        "Marinasi daging dengan yogurt bubuk cabai garam…",
+        "Tumis bawang bombay hingga karamel masukkan daging…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=785"
+    },
+    {
+      "dataset_id": 42,
+      "name": "Chicken Tikka Masala",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (India)",
+      "country": "India",
+      "minutes": 50,
+      "difficulty": "Sedang",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Kunyit Bubuk",
+        "Garam Masala",
+        "Jintan",
+        "Ketumbar",
+        "Cabai Kasmir"
+      ],
+      "description": "Potongan ayam panggang empuk dalam saus tomat berkrim yang kaya rempah hangat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Chicken Tikka Masala dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=670"
+    },
+    {
+      "dataset_id": 43,
+      "name": "Dal Tadka (Yellow Lentils)",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (India)",
+      "country": "India",
+      "minutes": 40,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Jintan",
+        "Kunyit",
+        "Bawang Putih",
+        "Cabai Kering",
+        "Daun Kari"
+      ],
+      "description": "Sup lentil kuning lembut yang diberi sentuhan akhir minyak rempah panas (tadka).",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Dal Tadka (Yellow Lentils) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=340"
+    },
+    {
+      "dataset_id": 44,
+      "name": "Masala Chai Authentic",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (India)",
+      "country": "India",
+      "minutes": 20,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kapulaga Hijau",
+        "Jahe",
+        "Kayu Manis",
+        "Cengkeh",
+        "Daun Teh Hitam"
+      ],
+      "description": "Teh susu tradisional India yang direbus bersama aneka rempah hangat dan pekat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Masala Chai Authentic dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=92"
+    },
+    {
+      "dataset_id": 45,
+      "name": "Chole Masala (Chickpea Curry)",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (India)",
+      "country": "India",
+      "minutes": 50,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Chana Masala Blend",
+        "Jintan",
+        "Ketumbar",
+        "Amchur (Mangga Kering)"
+      ],
+      "description": "Kari kacang garbanzo (chickpea) berempah pekat dengan rasa sedikit asam gurih.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Chole Masala (Chickpea Curry) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=290"
+    },
+    {
+      "dataset_id": 46,
+      "name": "Sichuan Mapo Tofu",
+      "category": "asia-timur",
+      "region": "Asia Timur (Cina)",
+      "country": "Cina",
+      "minutes": 30,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Sichuan Pepper (Hua Jiao)",
+        "Doubanjiang",
+        "Jahe",
+        "Bawang Putih"
+      ],
+      "description": "Tahu lembut dan daging cincang dalam saus pedas bergetar (numbling) khas Sichuan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Potong tahu menjadi dadu atau perut babi menjadi potongan kotak.",
+        "Rebus sebentar tahu/daging untuk menghilangkan bau amis.",
+        "Panaskan minyak di wok, tumis pasta doubanjiang, lada Sichuan, jahe, dan bawang putih hingga keluar minyak merah.",
+        "Tambahkan kaldu ayam dan kecap asin.",
+        "Masukkan tahu atau daging, didihkan perlahan agar bumbu meresap ke dalam.",
+        "Kentalkan kuah dengan larutan maizena, taburi dengan bubuk lada Sichuan dan daun bawang sesaat sebelum diangkat."
+      ],
+      "overview": [
+        "Potong tahu menjadi dadu atau perut babi…",
+        "Rebus sebentar tahu/daging untuk menghilangkan bau amis.",
+        "Panaskan minyak di wok tumis pasta doubanjiang…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=758"
+    },
+    {
+      "dataset_id": 47,
+      "name": "Red Braised Pork Belly (Hong Shao Rou)",
+      "category": "asia-timur",
+      "region": "Asia Timur (Cina)",
+      "country": "Cina",
+      "minutes": 120,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Star Anise (Pekak)",
+        "Kayu Manis Cina",
+        "Jahe",
+        "Kecap Asin"
+      ],
+      "description": "Perut babi empuk lumer di mulut yang direbus perlahan dengan gula karamel dan rempah.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Potong tahu menjadi dadu atau perut babi menjadi potongan kotak.",
+        "Rebus sebentar tahu/daging untuk menghilangkan bau amis.",
+        "Panaskan minyak di wok, tumis pasta doubanjiang, lada Sichuan, jahe, dan bawang putih hingga keluar minyak merah.",
+        "Tambahkan kaldu ayam dan kecap asin.",
+        "Masukkan tahu atau daging, didihkan perlahan agar bumbu meresap ke dalam.",
+        "Kentalkan kuah dengan larutan maizena, taburi dengan bubuk lada Sichuan dan daun bawang sesaat sebelum diangkat."
+      ],
+      "overview": [
+        "Potong tahu menjadi dadu atau perut babi…",
+        "Rebus sebentar tahu/daging untuk menghilangkan bau amis.",
+        "Panaskan minyak di wok tumis pasta doubanjiang…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=876"
+    },
+    {
+      "dataset_id": 48,
+      "name": "Authentic Beef Noodle Soup (Taiwan/China)",
+      "category": "asia-timur",
+      "region": "Asia Timur (Cina)",
+      "country": "Cina",
+      "minutes": 180,
+      "difficulty": "Sulit",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Star Anise",
+        "Szechuan Pepper",
+        "Kayu Manis",
+        "Jahe",
+        "Daun Bawang"
+      ],
+      "description": "Sup mie daging sapi kuah pekat beraroma rempah master stock yang sangat dalam.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Authentic Beef Noodle Soup (Taiwan/China) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=294"
+    },
+    {
+      "dataset_id": 49,
+      "name": "Kung Pao Chicken",
+      "category": "asia-timur",
+      "region": "Asia Timur (Cina)",
+      "country": "Cina",
+      "minutes": 25,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Sichuan Pepper",
+        "Cabai Kering",
+        "Kacang Mente",
+        "Jahe",
+        "Bawang Putih"
+      ],
+      "description": "Tumis ayam potong dadu dengan kacang mete, cabai kering, dan lada Sichuan yang gurih pedas.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Kung Pao Chicken dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=556"
+    },
+    {
+      "dataset_id": 50,
+      "name": "Traditional Tonkotsu Ramen",
+      "category": "asia-timur",
+      "region": "Asia Timur (Jepang)",
+      "country": "Jepang",
+      "minutes": 720,
+      "difficulty": "Sulit",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Jahe",
+        "Bawang Putih",
+        "Daun Bawang",
+        "Shichimi Togarashi (Pelengkap)"
+      ],
+      "description": "Mie ramen dengan kaldu tulang babi putih susu yang direbus berjam-jam hingga pekat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Traditional Tonkotsu Ramen dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=891"
+    },
+    {
+      "dataset_id": 51,
+      "name": "Unagi Kabayaki",
+      "category": "asia-timur",
+      "region": "Asia Timur (Jepang)",
+      "country": "Jepang",
+      "minutes": 40,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Sansho Pepper (Bubuk penabur)",
+        "Kecap Asin Jepang",
+        "Mirin",
+        "Sake"
+      ],
+      "description": "Belang panggang saus manis gurih disajikan dengan taburan merica sansho yang wangi.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Unagi Kabayaki dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=219"
+    },
+    {
+      "dataset_id": 52,
+      "name": "Authentic Chicken Teriyaki",
+      "category": "asia-timur",
+      "region": "Asia Timur (Jepang)",
+      "country": "Jepang",
+      "minutes": 25,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Jahe Parut",
+        "Shoyu (Kecap Asin)",
+        "Mirin",
+        "Gula"
+      ],
+      "description": "Ayam pan-seared dengan saus kilau manis gurih beraroma jahe segar.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Authentic Chicken Teriyaki dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=50"
+    },
+    {
+      "dataset_id": 53,
+      "name": "Tom Yum Goong Authentic",
+      "category": "asia-tenggara",
+      "region": "Asia Tenggara (Thailand)",
+      "country": "Thailand",
+      "minutes": 30,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Serai",
+        "Lengkuas (Kha)",
+        "Daun Jeruk Purut",
+        "Akar Ketumbar",
+        "Cabai Rawit"
+      ],
+      "description": "Sup udang asam pedas ikonik Thailand dengan aroma rempah segar yang sangat kuat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Didihkan kaldu udang atau ayam di dalam panci.",
+        "Masukkan serai yang sudah digeprek, lengkuas iris, daun jeruk purut, dan akar ketumbar.",
+        "Masukkan udang atau ayam beserta jamur merang.",
+        "Tambahkan pasta cabai (nam prik pao) dan kecap ikan.",
+        "Matikan api kompor, baru masukkan perasan air jeruk nipis segar dan cabai rawit utuh untuk menjaga kesegaran rasa.",
+        "Taburkan daun coriander segar di atasnya dan sajikan panas."
+      ],
+      "overview": [
+        "Didihkan kaldu udang atau ayam di dalam…",
+        "Masukkan serai yang sudah digeprek lengkuas iris…",
+        "Masukkan udang atau ayam beserta jamur merang."
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=13"
+    },
+    {
+      "dataset_id": 54,
+      "name": "Tom Kha Gai (Chicken Galangal Soup)",
+      "category": "asia-tenggara",
+      "region": "Asia Tenggara (Thailand)",
+      "country": "Thailand",
+      "minutes": 35,
+      "difficulty": "Mudah",
+      "dominant_taste": "asam",
+      "spices": [
+        "Lengkuas Muda",
+        "Serai",
+        "Daun Jeruk Purut",
+        "Santan",
+        "Akar Ketumbar"
+      ],
+      "description": "Sup ayam santan berkrim dengan dominasi rasa lengkuas muda yang harum dan lembut.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Didihkan kaldu udang atau ayam di dalam panci.",
+        "Masukkan serai yang sudah digeprek, lengkuas iris, daun jeruk purut, dan akar ketumbar.",
+        "Masukkan udang atau ayam beserta jamur merang.",
+        "Tambahkan pasta cabai (nam prik pao) dan kecap ikan.",
+        "Matikan api kompor, baru masukkan perasan air jeruk nipis segar dan cabai rawit utuh untuk menjaga kesegaran rasa.",
+        "Taburkan daun coriander segar di atasnya dan sajikan panas."
+      ],
+      "overview": [
+        "Didihkan kaldu udang atau ayam di dalam…",
+        "Masukkan serai yang sudah digeprek lengkuas iris…",
+        "Masukkan udang atau ayam beserta jamur merang."
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=289"
+    },
+    {
+      "dataset_id": 55,
+      "name": "Green Curry Chicken (Kaeng Khieu Wan)",
+      "category": "asia-tenggara",
+      "region": "Asia Tenggara (Thailand)",
+      "country": "Thailand",
+      "minutes": 40,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Pasta Kari Hijau (Serai, Lengkuas, Cabai Hijau, Kemangi Thailand)"
+      ],
+      "description": "Kari hijau aromatik kaya rempah daun dan santan dengan rasa pedas gurih.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Green Curry Chicken (Kaeng Khieu Wan) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=803"
+    },
+    {
+      "dataset_id": 56,
+      "name": "Authentic Chicken Mole Poblano",
+      "category": "eropa-amerika",
+      "region": "Amerika Latin (Meksiko)",
+      "country": "Meksiko",
+      "minutes": 180,
+      "difficulty": "Sulit",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Chipotle",
+        "Ancho Chiles",
+        "Kayu Manis",
+        "Cengkeh",
+        "Cokelat Hitam"
+      ],
+      "description": "Ayam dengan saus cokelat-cabai kompleks yang kaya rempah dan bercita rasa dalam.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam air hangat hingga lunak.",
+        "Haluskan cabai bersama rempah (kayu manis, cengkeh, oregano), cokelat hitam, dan kaldu.",
+        "Masak saus mole dengan api kecil selama 1 jam hingga mengental dan aromanya menyatu.",
+        "Lumuri daging ayam atau babi dengan saus atau marinasi achiote.",
+        "Panggang atau ungkep hingga empuk.",
+        "Sajikan di atas tortilla jagung hangat dengan taburan daun ketumbar dan jeruk nipis."
+      ],
+      "overview": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam…",
+        "Haluskan cabai bersama rempah (kayu manis cengkeh…",
+        "Masak saus mole dengan api kecil selama…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=948"
+    },
+    {
+      "dataset_id": 57,
+      "name": "Cochinita Pibil",
+      "category": "eropa-amerika",
+      "region": "Amerika Latin (Meksiko)",
+      "country": "Meksiko",
+      "minutes": 240,
+      "difficulty": "Sedang",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Biji Annatto (Achiote)",
+        "Oregano Meksiko",
+        "Jeruk Nipis",
+        "Bawang Putih"
+      ],
+      "description": "Babi panggang lambat khas Yucatan yang dimarinasi pasta achiote merah cerah.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam air hangat hingga lunak.",
+        "Haluskan cabai bersama rempah (kayu manis, cengkeh, oregano), cokelat hitam, dan kaldu.",
+        "Masak saus mole dengan api kecil selama 1 jam hingga mengental dan aromanya menyatu.",
+        "Lumuri daging ayam atau babi dengan saus atau marinasi achiote.",
+        "Panggang atau ungkep hingga empuk.",
+        "Sajikan di atas tortilla jagung hangat dengan taburan daun ketumbar dan jeruk nipis."
+      ],
+      "overview": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam…",
+        "Haluskan cabai bersama rempah (kayu manis cengkeh…",
+        "Masak saus mole dengan api kecil selama…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=393"
+    },
+    {
+      "dataset_id": 58,
+      "name": "Carne Asada Tacos",
+      "category": "eropa-amerika",
+      "region": "Amerika Latin (Meksiko)",
+      "country": "Meksiko",
+      "minutes": 40,
+      "difficulty": "Mudah",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Mexican Oregano",
+        "Jintan Bubuk",
+        "Bawang Putih",
+        "Jeruk Nipis",
+        "Ketumbar"
+      ],
+      "description": "Taco daging sapi panggang arang dengan marinasi rempah jeruk yang segar.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam air hangat hingga lunak.",
+        "Haluskan cabai bersama rempah (kayu manis, cengkeh, oregano), cokelat hitam, dan kaldu.",
+        "Masak saus mole dengan api kecil selama 1 jam hingga mengental dan aromanya menyatu.",
+        "Lumuri daging ayam atau babi dengan saus atau marinasi achiote.",
+        "Panggang atau ungkep hingga empuk.",
+        "Sajikan di atas tortilla jagung hangat dengan taburan daun ketumbar dan jeruk nipis."
+      ],
+      "overview": [
+        "Panggang cabai kering (chipotle/ancho) lalu rendam dalam…",
+        "Haluskan cabai bersama rempah (kayu manis cengkeh…",
+        "Masak saus mole dengan api kecil selama…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=175"
+    },
+    {
+      "dataset_id": 59,
+      "name": "Moroccan Lamb Tagine",
+      "category": "timur-tengah-afrika",
+      "region": "Afrika Utara (Maroko)",
+      "country": "Maroko",
+      "minutes": 150,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Ras el Hanout",
+        "Kunyit",
+        "Jahe",
+        "Kayu Manis",
+        "Saffron",
+        "Ketumbar"
+      ],
+      "description": "Domba empuk dimasak dalam wadah tanah liat tagine bersama rempah kompleks dan buah kering.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panaskan minyak zaitun di dalam wadah tanah liat tagine atau panci tebal.",
+        "Tumis bawang bombay, jahe, kunyit, dan rempah Ras el Hanout.",
+        "Masukkan potongan daging domba atau ayam, aduk hingga harum.",
+        "Tambahkan air secukupnya, buah kering (kismis/aprikot), dan tutup rapat.",
+        "Masak dengan api kecil perlahan hingga daging empuk dan saus mengental secara alami.",
+        "Kukus butiran couscous di atas uap tagine hingga mengembang lembut, sajikan berdampingan."
+      ],
+      "overview": [
+        "Panaskan minyak zaitun di dalam wadah tanah…",
+        "Tumis bawang bombay jahe kunyit dan rempah…",
+        "Masukkan potongan daging domba atau ayam aduk…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=77"
+    },
+    {
+      "dataset_id": 60,
+      "name": "Traditional Couscous with Spiced Vegetables",
+      "category": "timur-tengah-afrika",
+      "region": "Afrika Utara (Maroko)",
+      "country": "Maroko",
+      "minutes": 60,
+      "difficulty": "Mudah",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Ras el Hanout",
+        "Kayu Manis",
+        "Jintan",
+        "Kunyit"
+      ],
+      "description": "Butiran semolina lembut disajikan dengan rebusan sayuran berempah hangat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panaskan minyak zaitun di dalam wadah tanah liat tagine atau panci tebal.",
+        "Tumis bawang bombay, jahe, kunyit, dan rempah Ras el Hanout.",
+        "Masukkan potongan daging domba atau ayam, aduk hingga harum.",
+        "Tambahkan air secukupnya, buah kering (kismis/aprikot), dan tutup rapat.",
+        "Masak dengan api kecil perlahan hingga daging empuk dan saus mengental secara alami.",
+        "Kukus butiran couscous di atas uap tagine hingga mengembang lembut, sajikan berdampingan."
+      ],
+      "overview": [
+        "Panaskan minyak zaitun di dalam wadah tanah…",
+        "Tumis bawang bombay jahe kunyit dan rempah…",
+        "Masukkan potongan daging domba atau ayam aduk…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=828"
+    },
+    {
+      "dataset_id": 61,
+      "name": "Doro Wat (Ethiopian Chicken Stew)",
+      "category": "timur-tengah-afrika",
+      "region": "Afrika Timur (Ethiopia)",
+      "country": "Ethiopia",
+      "minutes": 120,
+      "difficulty": "Sulit",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Berbere Spice Blend",
+        "Korerima",
+        "Jahe",
+        "Bawang Merah Melimpah"
+      ],
+      "description": "Stew ayam pedas ikonik Ethiopia dengan bumbu dasar berbere merah yang sangat kaya.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Doro Wat (Ethiopian Chicken Stew) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=388"
+    },
+    {
+      "dataset_id": 62,
+      "name": "Persian Saffron Tahdig Rice",
+      "category": "timur-tengah-afrika",
+      "region": "Timur Tengah (Iran)",
+      "country": "Iran",
+      "minutes": 75,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Saffron Asli",
+        "Mentega",
+        "Yogurt"
+      ],
+      "description": "Nasi basmati beraroma saffron mewah dengan kerak keemasan renyah di dasar panci (tahdig).",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Rendam beras basmati selama 30 menit, lalu rebus setengah matang bersama rempah utuh (kapulaga, kayu manis, cengkeh) dan tiriskan.",
+        "Marinasi daging dengan yogurt, bubuk cabai, garam, dan rempah garam masala.",
+        "Tumis bawang bombay hingga karamel, masukkan daging marinasi hingga berubah warna.",
+        "Susun nasi setengah matang di atas tumisan daging, beri percikan air saffron dan mentega di atasnya.",
+        "Tutup panci rapat-rapat (sealed dengan adonan tepung jika perlu) dan masak dengan metode dum (api sangat kecil) selama 40 menit.",
+        "Aduk perlahan saat disajikan agar warna nasi tercampur cantik."
+      ],
+      "overview": [
+        "Rendam beras basmati selama 30 menit lalu…",
+        "Marinasi daging dengan yogurt bubuk cabai garam…",
+        "Tumis bawang bombay hingga karamel masukkan daging…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=526"
+    },
+    {
+      "dataset_id": 63,
+      "name": "Joojeh Kabab (Persian Saffron Chicken)",
+      "category": "timur-tengah-afrika",
+      "region": "Timur Tengah (Iran)",
+      "country": "Iran",
+      "minutes": 40,
+      "difficulty": "Mudah",
+      "dominant_taste": "asam",
+      "spices": [
+        "Saffron",
+        "Lemon",
+        "Bawang Bombay",
+        "Minyak Zaitun"
+      ],
+      "description": "Susunan sate ayam panggang dengan marinasi air saffron dan lemon yang harum mewah.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Joojeh Kabab (Persian Saffron Chicken) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=728"
+    },
+    {
+      "dataset_id": 64,
+      "name": "Adana Kebab Turkish",
+      "category": "timur-tengah-afrika",
+      "region": "Timur Tengah (Turki)",
+      "country": "Turki",
+      "minutes": 35,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Aleppo Pepper (Pul Biber)",
+        "Paprika Bubuk",
+        "Jintan"
+      ],
+      "description": "Daging cincang domba berbumbu rempah aleppo pepper yang ditusuk pipih lalu dibakar arang.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Adana Kebab Turkish dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=24"
+    },
+    {
+      "dataset_id": 65,
+      "name": "Turkish Lentil Soup (Mercimek Corbasi)",
+      "category": "timur-tengah-afrika",
+      "region": "Timur Tengah (Turki)",
+      "country": "Turki",
+      "minutes": 30,
+      "difficulty": "Mudah",
+      "dominant_taste": "manis",
+      "spices": [
+        "Mint Kering (Kuru Nane)",
+        "Jintan Bubuk",
+        "Paprika Asap"
+      ],
+      "description": "Sup lentil merah halus yang disiram minyak mint dan paprika hangat.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Turkish Lentil Soup (Mercimek Corbasi) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=907"
+    },
+    {
+      "dataset_id": 66,
+      "name": "Paella Valenciana Tradisional",
+      "category": "eropa-amerika",
+      "region": "Eropa (Spanyol)",
+      "country": "Spanyol",
+      "minutes": 60,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Saffron La Mancha",
+        "Paprika Asap (Pimentón)",
+        "Rosemary"
+      ],
+      "description": "Nasi khas Spanyol beraroma saffron dan paprika asap dengan isian daging dan sayur.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panaskan minyak zaitun dalam wajan paella datar.",
+        "Tumis potongan daging atau seafood hingga harum, lalu pinggirkan.",
+        "Masukkan beras arborio/bomba, aduk rata dengan minyak.",
+        "Tuang kaldu hangat yang telah dicampur putik saffron dan paprika asap (pimentón).",
+        "Masak tanpa diaduk hingga air menyusut dan terbentuk kerak kecokelatan renyah di dasar wajan (socarrat).",
+        "Diamkan sebentar sebelum dihidangkan dengan irisan lemon."
+      ],
+      "overview": [
+        "Panaskan minyak zaitun dalam wajan paella datar.",
+        "Tumis potongan daging atau seafood hingga harum…",
+        "Masukkan beras arborio/bomba aduk rata dengan minyak."
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=494"
+    },
+    {
+      "dataset_id": 67,
+      "name": "Patatas Bravas with Spicy Tomato Sauce",
+      "category": "eropa-amerika",
+      "region": "Eropa (Spanyol)",
+      "country": "Spanyol",
+      "minutes": 35,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Paprika Asap Manis & Pedas",
+        "Bawang Putih"
+      ],
+      "description": "Kentang potong dadu goreng renyah disiram saus tomat beraroma paprika asap khas Spanyol.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Panaskan minyak zaitun dalam wajan paella datar.",
+        "Tumis potongan daging atau seafood hingga harum, lalu pinggirkan.",
+        "Masukkan beras arborio/bomba, aduk rata dengan minyak.",
+        "Tuang kaldu hangat yang telah dicampur putik saffron dan paprika asap (pimentón).",
+        "Masak tanpa diaduk hingga air menyusut dan terbentuk kerak kecokelatan renyah di dasar wajan (socarrat).",
+        "Diamkan sebentar sebelum dihidangkan dengan irisan lemon."
+      ],
+      "overview": [
+        "Panaskan minyak zaitun dalam wajan paella datar.",
+        "Tumis potongan daging atau seafood hingga harum…",
+        "Masukkan beras arborio/bomba aduk rata dengan minyak."
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=967"
+    },
+    {
+      "dataset_id": 68,
+      "name": "Authentic Neapolitan Pizza Margherita",
+      "category": "eropa-amerika",
+      "region": "Eropa (Italia)",
+      "country": "Italia",
+      "minutes": 20,
+      "difficulty": "Sedang",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Basil Genovese Segar",
+        "Oregano",
+        "Minyak Zaitun"
+      ],
+      "description": "Pizza tipis klasik Napoli dengan saus tomat murni, mozzarella segar, dan daun basil.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Uleni adonan tepung terigu, ragi, air, dan garam hingga kalis, lalu fermentasi hingga mengembang.",
+        "Haluskan daun basil segar bersama kacang pinus, bawang putih, keju parmesan, dan minyak zaitun ekstra virgin.",
+        "Pipihkan adonan pizza, beri olesan saus tomat segar dan keju mozzarella.",
+        "Panggang dalam oven bersuhu sangat tinggi (250-300°C) hingga pinggiran mengembang kecokelatan.",
+        "Tambahkan daun basil segar di atasnya setelah matang.",
+        "Potong-potong dan sajikan selagi hangat."
+      ],
+      "overview": [
+        "Uleni adonan tepung terigu ragi air dan…",
+        "Haluskan daun basil segar bersama kacang pinus…",
+        "Pipihkan adonan pizza beri olesan saus tomat…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=238"
+    },
+    {
+      "dataset_id": 69,
+      "name": "Classic Pesto alla Genovese Pasta",
+      "category": "eropa-amerika",
+      "region": "Eropa (Italia)",
+      "country": "Italia",
+      "minutes": 15,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Basil Genovese",
+        "Kacang Pinus",
+        "Keju Parmigiano",
+        "Bawang Putih"
+      ],
+      "description": "Pasta segar dengan saus hijau basil segar, minyak zaitun, dan keju parmesan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Uleni adonan tepung terigu, ragi, air, dan garam hingga kalis, lalu fermentasi hingga mengembang.",
+        "Haluskan daun basil segar bersama kacang pinus, bawang putih, keju parmesan, dan minyak zaitun ekstra virgin.",
+        "Pipihkan adonan pizza, beri olesan saus tomat segar dan keju mozzarella.",
+        "Panggang dalam oven bersuhu sangat tinggi (250-300°C) hingga pinggiran mengembang kecokelatan.",
+        "Tambahkan daun basil segar di atasnya setelah matang.",
+        "Potong-potong dan sajikan selagi hangat."
+      ],
+      "overview": [
+        "Uleni adonan tepung terigu ragi air dan…",
+        "Haluskan daun basil segar bersama kacang pinus…",
+        "Pipihkan adonan pizza beri olesan saus tomat…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=188"
+    },
+    {
+      "dataset_id": 70,
+      "name": "Jamaican Jerk Chicken",
+      "category": "eropa-amerika",
+      "region": "Karibia (Jamaika)",
+      "country": "Jamaika",
+      "minutes": 60,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Allspice",
+        "Scotch Bonnet Pepper",
+        "Thyme",
+        "Pala",
+        "Kayu Manis"
+      ],
+      "description": "Ayam bakar pedas berasap khas Karibia dengan bumbu marinasi allspice dan cabai scotch bonnet.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Blender halus cabai scotch bonnet, daun thyme segar, allspice, pala, kayu manis, bawang putih, dan cuka.",
+        "Lumuri potongan ayam dengan bumbu marinasi secara tebal, diamkan minimal 4 jam di dalam kulkas.",
+        "Siapkan panggangan arang dengan kayu aromatik jika ada untuk efek asap.",
+        "Panggang ayam di atas bara api sedang sambil dioles sisa bumbu marinasi.",
+        "Balik secara berkala hingga bagian luar kecokelatan berasap dan bagian dalam matang sempurna.",
+        "Potong-potong dan sajikan dengan saus pedas karibia."
+      ],
+      "overview": [
+        "Blender halus cabai scotch bonnet daun thyme…",
+        "Lumuri potongan ayam dengan bumbu marinasi secara…",
+        "Siapkan panggangan arang dengan kayu aromatik jika…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=848"
+    },
+    {
+      "dataset_id": 71,
+      "name": "Sri Lankan Black Pork Curry",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (Sri Lanka)",
+      "country": "Sri Lanka",
+      "minutes": 90,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Kayu Manis Ceylon",
+        "Daun Kari",
+        "Jintan Hitam",
+        "Roasted Curry Powder"
+      ],
+      "description": "Kari daging babi hitam pekat dengan aroma kayu manis ceylon dan daun kari segar.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Sri Lankan Black Pork Curry dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=641"
+    },
+    {
+      "dataset_id": 72,
+      "name": "Pol Sambol (Coconut Relish)",
+      "category": "asia-selatan",
+      "region": "Asia Selatan (Sri Lanka)",
+      "country": "Sri Lanka",
+      "minutes": 30,
+      "difficulty": "Mudah",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kelapa Parut",
+        "Cabai Merah Kering",
+        "Air Jeruk Nipis",
+        "Bawang Merah"
+      ],
+      "description": "Sambal kelapa segar pedas gurih sebagai pendamping wajib hidangan Sri Lanka.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Pol Sambol (Coconut Relish) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=700"
+    },
+    {
+      "dataset_id": 73,
+      "name": "Authentic Vietnamese Beef Pho (Pho Bo)",
+      "category": "asia-tenggara",
+      "region": "Asia Tenggara (Vietnam)",
+      "country": "Vietnam",
+      "minutes": 360,
+      "difficulty": "Sulit",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kayu Manis Saigon",
+        "Bunga Lawang",
+        "Kapulaga",
+        "Jahe Bakar",
+        "Ketumbar"
+      ],
+      "description": "Sup mie beras Vietnam berkuah bening jernih dengan aroma rempah kayu manis dan star anise yang harum.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Rebus tulang sapi dan daging sandung lamur selama 5 menit, buang air kotorannya.",
+        "Bakar jahe dan bawang bombay hingga kehitaman aromanya.",
+        "Sangrai rempah (kayu manis Saigon, bunga lawang, kapulaga, ketumbar) hingga harum.",
+        "Rebus ulang tulang dan daging bersama jahe bakar, bawang, dan kantong rempah dalam air bersih selama 6-8 jam dengan api kecil.",
+        "Seduh mie pho dengan air panas, tata irisan daging mentah dan matang di atasnya.",
+        "Siram dengan kuah kaldu panas mendidih, sajikan dengan tauge, basil, dan jeruk nipis."
+      ],
+      "overview": [
+        "Rebus tulang sapi dan daging sandung lamur…",
+        "Bakar jahe dan bawang bombay hingga kehitaman…",
+        "Sangrai rempah (kayu manis Saigon bunga lawang…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=551"
+    },
+    {
+      "dataset_id": 74,
+      "name": "Vietnamese Lemongrass Pork (Thit Heo Xa)",
+      "category": "asia-tenggara",
+      "region": "Asia Tenggara (Vietnam)",
+      "country": "Vietnam",
+      "minutes": 30,
+      "difficulty": "Mudah",
+      "dominant_taste": "umami",
+      "spices": [
+        "Serai Cincang",
+        "Bawang Putih",
+        "Kecap Ikan",
+        "Caramel Sauce"
+      ],
+      "description": "Tumis daging babi karamel dengan aroma serai cincang segar yang sangat dominan.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Vietnamese Lemongrass Pork (Thit Heo Xa) dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=95"
+    },
+    {
+      "dataset_id": 75,
+      "name": "Soto Betawi Daging Sapi",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Pala",
+        "Cengkeh",
+        "Kayu Manis",
+        "Serai"
+      ],
+      "description": "Resep otentik Soto Betawi Daging Sapi yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau jeroan sapi hingga empuk, potong-potong, saring kaldunya.",
+        "Haluskan bumbu rempah (pala, cengkeh, kayu manis, jahe, bawang).",
+        "Tumis bumbu halus bersama serai dan daun salam hingga harum.",
+        "Campurkan tumisan bumbu ke dalam air kaldu, tambahkan santan encer dan susu cair.",
+        "Masak dengan api sedang sambil diaduk agar santan tidak pecah.",
+        "Sajikan dengan taburan bawang goreng, emping, dan irisan tomat."
+      ],
+      "overview": [
+        "Rebus daging atau jeroan sapi hingga empuk…",
+        "Haluskan bumbu rempah (pala cengkeh kayu manis…",
+        "Tumis bumbu halus bersama serai dan daun…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 76,
+      "name": "Gulai Kepala Ikan",
+      "category": "nusantara-sumatera",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Kunyit",
+        "Serai",
+        "Lengkuas",
+        "Asam Kandis"
+      ],
+      "description": "Resep otentik Gulai Kepala Ikan yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Gulai Kepala Ikan dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 77,
+      "name": "Nasi Uduk Betawi",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Serai",
+        "Daun Salam",
+        "Daun Pandan",
+        "Santan"
+      ],
+      "description": "Resep otentik Nasi Uduk Betawi yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Beras Basmati/Pulen, Minyak samin/Margarine, Kaldu, Garam",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Nasi Uduk Betawi dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 78,
+      "name": "Asam Padeh Daging",
+      "category": "nusantara-sumatera",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Asam Jawa",
+        "Kunyit",
+        "Jahe",
+        "Cabai Merah"
+      ],
+      "description": "Resep otentik Asam Padeh Daging yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Asam Padeh Daging dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=867"
+    },
+    {
+      "dataset_id": 79,
+      "name": "Tahu Tek Surabaya",
+      "category": "nusantara-jawa",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Petis Udang",
+        "Bawang Putih",
+        "Kacang Tanah"
+      ],
+      "description": "Resep otentik Tahu Tek Surabaya yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Tahu Tek Surabaya dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=720"
+    },
+    {
+      "dataset_id": 80,
+      "name": "Mie Rebus Medan",
+      "category": "nusantara-sumatera",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Ebi",
+        "Bawang Putih",
+        "Serai",
+        "Lengkuas"
+      ],
+      "description": "Resep otentik Mie Rebus Medan yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Mie Rebus Medan dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=58"
+    },
+    {
+      "dataset_id": 81,
+      "name": "Sate Padang Daging",
+      "category": "nusantara-sumatera",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pahit",
+      "spices": [
+        "Kunyit",
+        "Jintan",
+        "Ketumbar",
+        "Tepung Beras"
+      ],
+      "description": "Resep otentik Sate Padang Daging yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Sate Padang Daging dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 82,
+      "name": "Sup Konro Bakar",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kluwek",
+        "Ketumbar",
+        "Jintan",
+        "Kayu Manis"
+      ],
+      "description": "Resep otentik Sup Konro Bakar yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 83,
+      "name": "Ikan Bakar Manokwari",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Cabai Rawit Hijau",
+        "Bawang Merah",
+        "Jeruk Nipis"
+      ],
+      "description": "Resep otentik Ikan Bakar Manokwari yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Ikan Bakar Manokwari dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 84,
+      "name": "Papeda Ikan Kuah Kuning",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Kunyit",
+        "Jahe",
+        "Serai",
+        "Kemangi"
+      ],
+      "description": "Resep otentik Papeda Ikan Kuah Kuning yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Ikan segar (mas/patin/gurame), Jeruk nipis, Garam, Minyak",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Papeda Ikan Kuah Kuning dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 85,
+      "name": "Ayam Penyet Sambal Terasi",
+      "category": "nusantara-jawa",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Terasi Bakar",
+        "Cabai Rawit",
+        "Bawang Putih"
+      ],
+      "description": "Resep otentik Ayam Penyet Sambal Terasi yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Ayam Penyet Sambal Terasi dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 86,
+      "name": "Nasi Goreng Kampung",
+      "category": "nusantara-nasional",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Terasi",
+        "Bawang Merah",
+        "Cabai Rawit",
+        "Kemiri"
+      ],
+      "description": "Resep otentik Nasi Goreng Kampung yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Wajan penggorengan, Sutil, Kompor, Pisau, Talenan",
+      "ingredients": "Beras Basmati/Pulen, Minyak samin/Margarine, Kaldu, Garam",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Nasi Goreng Kampung dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 87,
+      "name": "Bakso Malang Kuah Sapi",
+      "category": "nusantara-jawa",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Bawang Putih",
+        "Lada Putih",
+        "Seledri"
+      ],
+      "description": "Resep otentik Bakso Malang Kuah Sapi yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Bakso Malang Kuah Sapi dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=423"
+    },
+    {
+      "dataset_id": 88,
+      "name": "Soto Bandung Segar",
+      "category": "nusantara-jawa",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Lobak Putih",
+        "Jahe",
+        "Serai",
+        "Lada"
+      ],
+      "description": "Resep otentik Soto Bandung Segar yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panci besar, Pisau koki, Talenan, Ulekan/Blender, Sendok sayur",
+      "ingredients": "Daging/Ayam pilihan, Air kaldu, Minyak, Garam, Penyedap secukupnya",
+      "steps": [
+        "Rebus daging atau ayam pilihan dengan air secukupnya hingga mendidih dan berkaldu.",
+        "Haluskan bumbu dasar rimpang (jahe, kunyit, bawang) lalu tumis dengan serai dan daun jeruk.",
+        "Masukkan bumbu tumis ke dalam panci rebusan kaldu.",
+        "Bumbui dengan garam, lada, dan penyedap rasa, koreksi rasa.",
+        "Masak hingga daging empuk dan bumbu menyatu dengan kuah.",
+        "Hidangkan panas bersama pelengkap mi, tauge, dan seledri."
+      ],
+      "overview": [
+        "Rebus daging atau ayam pilihan dengan air…",
+        "Haluskan bumbu dasar rimpang (jahe kunyit bawang)…",
+        "Masukkan bumbu tumis ke dalam panci rebusan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 89,
+      "name": "Sayur Asem Jakarta",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Belimbing Wuluh",
+        "Asam Jawa",
+        "Lengkuas",
+        "Salam"
+      ],
+      "description": "Resep otentik Sayur Asem Jakarta yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Aneka sayuran segar, Santan/Kacang tanah, Garam, Gula",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Sayur Asem Jakarta dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 90,
+      "name": "Gado-Gado Jakarta",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kacang Tanah",
+        "Terasi",
+        "Air Asam Jawa",
+        "Gula Merah"
+      ],
+      "description": "Resep otentik Gado-Gado Jakarta yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Gado-Gado Jakarta dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 91,
+      "name": "Ketoprak Jakarta",
+      "category": "nusantara-jakarta-betawi",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Kacang Tanah",
+        "Bawang Putih",
+        "Cabai",
+        "Gula Merah"
+      ],
+      "description": "Resep otentik Ketoprak Jakarta yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Ketoprak Jakarta dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=515"
+    },
+    {
+      "dataset_id": 92,
+      "name": "Bubur Manado Tinutuan",
+      "category": "nusantara-sulawesi-timur",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "asam",
+      "spices": [
+        "Labu Kuning",
+        "Bayam",
+        "Kemangi",
+        "Serai"
+      ],
+      "description": "Resep otentik Bubur Manado Tinutuan yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Bubur Manado Tinutuan dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 93,
+      "name": "Ayam Betutu Gilimanuk",
+      "category": "nusantara-bali-nusa-tenggara",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Basa Genep",
+        "Kunyit",
+        "Jahe",
+        "Kencur"
+      ],
+      "description": "Resep otentik Ayam Betutu Gilimanuk yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging ayam segar, Minyak, Garam, Air",
+      "steps": [
+        "Siapkan ayam utuh yang telah dibersihkan.",
+        "Haluskan bumbu 'Basa Genep' (kunyit, jahe, lengkuas, kencur, terasi, cabai, serai) secara kasar.",
+        "Tumis sebagian bumbu hingga harum, lalu campurkan sisanya dengan minyak kelapa mentah.",
+        "Baluri seluruh permukaan dan rongga perut ayam dengan bumbu hingga merata.",
+        "Bungkus rapat ayam dengan daun pisang atau masukkan ke dalam wadah tahan panas.",
+        "Panggang atau kukus dalam suhu rendah selama 2 hingga 3 jam hingga daging ayam sangat empuk dan bumbu meresap."
+      ],
+      "overview": [
+        "Siapkan ayam utuh yang telah dibersihkan.",
+        "Haluskan bumbu 'Basa Genep' (kunyit jahe lengkuas…",
+        "Tumis sebagian bumbu hingga harum lalu campurkan…"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 94,
+      "name": "Sate Maranggi Purwakarta",
+      "category": "nusantara-jawa",
+      "region": "Indonesia",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "manis",
+      "spices": [
+        "Ketumbar",
+        "Gula Aren",
+        "Asam Jawa",
+        "Bawang Putih"
+      ],
+      "description": "Resep otentik Sate Maranggi Purwakarta yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Panggang/Arang/Teflon grill, Tusuk sate, Pisau koki, Talenan, Wadah marinasi",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Sate Maranggi Purwakarta dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "dataset_id": 95,
+      "name": "Butter Chicken India",
+      "category": "asia-selatan",
+      "region": "Indonesia/India",
+      "country": "Indonesia",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Garam Masala",
+        "Fenugreek",
+        "Jahe",
+        "Bawang Putih"
+      ],
+      "description": "Resep otentik Butter Chicken India yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Butter Chicken India dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=25"
+    },
+    {
+      "dataset_id": 96,
+      "name": "Lamb Vindaloo Goa",
+      "category": "asia-selatan",
+      "region": "India",
+      "country": "India",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Cuka Kelapa",
+        "Cabai Kering",
+        "Jintan",
+        "Kayu Manis"
+      ],
+      "description": "Resep otentik Lamb Vindaloo Goa yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Lamb Vindaloo Goa dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=227"
+    },
+    {
+      "dataset_id": 97,
+      "name": "Palak Paneer India",
+      "category": "asia-selatan",
+      "region": "India",
+      "country": "India",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Bayam",
+        "Garam Masala",
+        "Jintan",
+        "Jahe"
+      ],
+      "description": "Resep otentik Palak Paneer India yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Palak Paneer India dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=513"
+    },
+    {
+      "dataset_id": 98,
+      "name": "Samosa Kentang Rempah",
+      "category": "asia-selatan",
+      "region": "India",
+      "country": "India",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Jintan",
+        "Ketumbar",
+        "Garam Masala",
+        "Cabai Hijau"
+      ],
+      "description": "Resep otentik Samosa Kentang Rempah yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Samosa Kentang Rempah dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=975"
+    },
+    {
+      "dataset_id": 99,
+      "name": "Dim Sum Har Gow",
+      "category": "asia-timur",
+      "region": "Cina",
+      "country": "Cina",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "pedas",
+      "spices": [
+        "Jahe",
+        "Minyak Wijen",
+        "Lada Putih"
+      ],
+      "description": "Resep otentik Dim Sum Har Gow yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Dim Sum Har Gow dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=865"
+    },
+    {
+      "dataset_id": 100,
+      "name": "Peking Duck Authentic",
+      "category": "asia-timur",
+      "region": "Cina",
+      "country": "Cina",
+      "minutes": 45,
+      "difficulty": "Sedang",
+      "dominant_taste": "umami",
+      "spices": [
+        "Five-Spice Powder",
+        "Kecap Asin",
+        "Maltose"
+      ],
+      "description": "Resep otentik Peking Duck Authentic yang menggunakan kekayaan rempah pilihan sesuai standar kuliner tradisional.",
+      "tools": "Pisau koki, Talenan, Panci/Wajan, Spatula, Blender/Ulekan",
+      "ingredients": "Daging/Ayam/Ikan pilihan, Minyak secukupnya, Garam, Gula, Air",
+      "steps": [
+        "Prep & Marinasi: Siapkan bahan utama untuk Peking Duck Authentic dan lakukan marinasi dengan rempah pilihan.",
+        "Pengolahan Bumbu: Siapkan dan tumis bumbu dasar khas negara asal hingga mengeluarkan aroma maksimal.",
+        "Kombinasi Bahan: Masukkan bahan utama ke dalam wajan atau panci pengolahan.",
+        "Proses Memasak: Masak menggunakan teknik yang sesuai (tumis, rebus, panggang, atau braising) hingga tingkat kematangan ideal.",
+        "Finishing: Tambahkan bumbu koreksi rasa atau saus pelengkap.",
+        "Plating: Sajikan hidangan dengan estetika khas sesuai tradisi asalnya."
+      ],
+      "overview": [
+        "Prep & Marinasi",
+        "Pengolahan Bumbu",
+        "Kombinasi Bahan"
+      ],
+      "authenticity": "100% Sesuai Resep Tradisional & Standar Kuliner Asli",
+      "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80&sig=900"
+    }
+  ]
+}
