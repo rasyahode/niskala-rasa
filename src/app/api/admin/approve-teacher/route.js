@@ -5,49 +5,61 @@ import pool from "@/lib/db";
 export async function POST(request) {
     try {
         const cookieStore = await cookies();
-        const adminId = cookieStore.get("niskala_user_id")?.value;
+        const currentUserId = cookieStore.get("niskala_user_id")?.value;
 
-        if (!adminId) {
-            return NextResponse.json({ error: "Akses ditolak." }, { status: 401 });
+        if (!currentUserId) {
+            return NextResponse.json({ error: "Belum login." }, { status: 401 });
         }
 
-        const adminRes = await pool.query(
-            "SELECT id, role FROM users WHERE id = $1",
-            [Number(adminId)]
+        const adminCheck = await pool.query(
+            "SELECT role FROM users WHERE id = $1",
+            [Number(currentUserId)]
         );
-        const adminUser = adminRes.rows[0];
-
-        if (!adminUser || adminUser.role !== "admin") {
+        if (adminCheck.rows[0]?.role !== "admin") {
             return NextResponse.json(
-                { error: "Hanya Admin yang dapat memvalidasi Spice Master." },
+                { error: "Akses khusus Admin." },
                 { status: 403 }
             );
         }
 
-        const { userId } = await request.json();
-        const targetId = Number(userId);
+        const body = await request.json();
+        const targetUserId = Number(body.userId ?? body.id);
 
-        if (!targetId) {
-            return NextResponse.json({ error: "ID pengguna tidak valid." }, { status: 400 });
+        if (!targetUserId) {
+            return NextResponse.json(
+                { error: "ID calon guru tidak valid." },
+                { status: 400 }
+            );
         }
 
-        const { rows } = await pool.query(
-            `UPDATE users
-            SET role = 'teacher', teacher_status = 'approved', approved_at = NOW()
+        const updated = await pool.query(
+            `
+            UPDATE users
+            SET role = 'teacher',
+                teacher_status = 'approved',
+                approved_at = NOW()
             WHERE id = $1
-            RETURNING id, username, email, role, teacher_status, approved_at`,
-            [targetId]
+            RETURNING id, username, email, role, teacher_status, teacher_level, approved_at
+            `,
+            [targetUserId]
         );
 
-        if (!rows[0]) {
-            return NextResponse.json({ error: "Pengguna tidak ditemukan." }, { status: 404 });
+        if (updated.rows.length === 0) {
+            return NextResponse.json(
+                { error: "Pengguna tidak ditemukan." },
+                { status: 404 }
+            );
         }
 
         return NextResponse.json({
-            message: "Calon Spice Master berhasil disetujui.",
-            user: rows[0],
+            message: "Calon guru berhasil disetujui.",
+            user: updated.rows[0],
         });
-    } catch (err) {
-        return NextResponse.json({ error: "Gagal memproses persetujuan." }, { status: 500 });
+    } catch (error) {
+        console.error("Error approve-teacher:", error);
+        return NextResponse.json(
+            { error: "Gagal menyetujui pengajuan guru." },
+            { status: 500 }
+        );
     }
 }
