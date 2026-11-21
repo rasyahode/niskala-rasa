@@ -3,31 +3,31 @@ import Link from "next/link";
 const COURSE_FORMATS = [
     {
         title: "Basic",
-        badge: "Jenjang Guru",
+        badge: "Jenjang Teacher",
         desc: "Dasar pengenalan rempah khas Indonesia, aroma, dan teknik sangrai atau infusi awal.",
-        href: "/spices",
-        cta: "Pelajari Rempah",
+        href: "/teacher?level=basic",
+        cta: "Lihat Profil Teacher",
     },
     {
         title: "Intermediate",
-        badge: "Jenjang Guru",
+        badge: "Jenjang Teacher",
         desc: "Penerapan rempah Indonesia pada resep khas Indonesia maupun resep luar negeri terpilih.",
-        href: "/recipes",
-        cta: "Jelajahi Resep",
+        href: "/teacher?level=intermediate",
+        cta: "Lihat Profil Teacher",
     },
     {
         title: "Advanced",
-        badge: "Jenjang Guru",
+        badge: "Jenjang Teacher",
         desc: "Pengaturan suhu, waktu sangrai, dan keseimbangan rasa manis, asam, pedas, serta pahit.",
-        href: "/sessions",
-        cta: "Lihat Sesi Kelas",
+        href: "/teacher?level=advanced",
+        cta: "Lihat Profil Teacher",
     },
     {
         title: "Professional",
-        badge: "Jenjang Guru",
+        badge: "Jenjang Teacher",
         desc: "Standar profesi pengajar dengan verifikasi CV dan lisensi keprofesionalan oleh Admin.",
-        href: "/login",
-        cta: "Daftar / Masuk",
+        href: "/teacher?level=professional",
+        cta: "Lihat Profil Teacher",
     },
 ];
 
