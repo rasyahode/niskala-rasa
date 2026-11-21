@@ -1,89 +1,162 @@
 import Link from "next/link";
 
-const TEACHER_LEVELS = [
+const COURSE_FORMATS = [
     {
-        level: "Basic",
-        desc: "Pengenalan rempah khas Indonesia dan teknik pengolahan dasar.",
+        title: "Basic",
+        badge: "Jenjang Guru",
+        desc: "Dasar pengenalan rempah khas Indonesia, aroma, dan teknik sangrai atau infusi awal.",
+        href: "/spices",
+        cta: "Pelajari Rempah",
     },
     {
-        level: "Intermediate",
-        desc: "Penerapan rempah Indonesia ke resep luar negeri serta masakan Nusantara.",
+        title: "Intermediate",
+        badge: "Jenjang Guru",
+        desc: "Penerapan rempah Indonesia pada resep khas Indonesia maupun resep luar negeri terpilih.",
+        href: "/recipes",
+        cta: "Jelajahi Resep",
     },
     {
-        level: "Advanced",
-        desc: "Pengaturan panas sangrai, infusi, dan keseimbangan rasa rempah.",
+        title: "Advanced",
+        badge: "Jenjang Guru",
+        desc: "Pengaturan suhu, waktu sangrai, dan keseimbangan rasa manis, asam, pedas, serta pahit.",
+        href: "/sessions",
+        cta: "Lihat Sesi Kelas",
     },
     {
-        level: "Professional",
-        desc: "Kurasi standar profesi, pengembangan resep, dan bimbingan praktik.",
+        title: "Professional",
+        badge: "Jenjang Guru",
+        desc: "Standar profesi pengajar dengan verifikasi CV dan lisensi keprofesionalan oleh Admin.",
+        href: "/login",
+        cta: "Daftar / Masuk",
+    },
+];
+
+const UPCOMING_SESSIONS = [
+    {
+        day: "Sesi Daring",
+        title: "Teknik Sangrai Kayu Manis Kerinci & Kapulaga untuk Resep Luar Negeri",
+        focus: "Rasa Manis & Aromatik · Instruktur Terverifikasi",
+    },
+    {
+        day: "Studio Makassar",
+        title: "Praktik Langsung Pengolahan Rempah Khas Indonesia & Coto Makassar",
+        focus: "Tatap Muka Makassar · Rempah Nusantara",
+    },
+    {
+        day: "Sesi Daring",
+        title: "Mengolah Andaliman & Pala Banda Tanpa Menghilangkan Karakter Aslinya",
+        focus: "Rasa Asam & Pahit · Seleksi Resep",
     },
 ];
 
 export default function HomePage() {
     return (
-        <main className="mx-auto max-w-5xl px-4 py-12 space-y-10">
-            <section className="rounded-2xl border border-neutral-200 bg-white p-6 sm:p-8 space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
-                    Niskala Rasa · Kursus Pengolahan Rempah Khas Indonesia
+        <main className="mx-auto max-w-4xl px-4 py-10 space-y-12">
+            <section className="space-y-5 text-center border-b pb-10">
+                <p className="text-xs font-semibold uppercase tracking-widest text-emerald-700">
+                    Niskala Rasa Cooking Course
                 </p>
-                <h1 className="text-3xl font-bold tracking-tight text-neutral-900">
-                    Pengolahan Rempah Indonesia &amp; Seleksi Resep Berempah Indonesia
+                <h1 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
+                    Kursus Pengolahan Rempah Khas Indonesia
                 </h1>
-                <p className="max-w-2xl text-sm leading-relaxed text-neutral-600">
-                    Platform pembelajaran rempah khas asal Indonesia yang mempertahankan resep khas
-                    Indonesia serta menyeleksi dan merekomendasikan resep luar negeri yang menggunakan rempah
-                    khas Indonesia, dengan sesi daring maupun Studio Makassar.
-                </p>
 
-                <div className="flex flex-wrap gap-3 pt-2">
-                    <Link
-                        href="/spices"
-                        className="rounded-lg bg-emerald-700 px-4 py-2.5 text-xs font-semibold text-white hover:bg-emerald-800"
-                    >
-                        Rempah Khas Indonesia
-                    </Link>
+                <div className="mx-auto overflow-hidden rounded-xl border border-neutral-200 bg-emerald-950 text-white">
+                    <div className="flex flex-col items-center justify-center px-6 py-12 text-center space-y-2 bg-gradient-to-br from-emerald-900 via-emerald-800 to-stone-800">
+                        <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-medium">
+                            Rempah Khas Indonesia · Resep Indonesia &amp; Seleksi Luar Negeri
+                        </span>
+                        <p className="max-w-xl text-base font-semibold sm:text-lg">
+                            Mempertahankan resep khas Indonesia serta menyeleksi dan merekomendasikan resep luar
+                            negeri yang memakai rempah khas asal Indonesia.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mx-auto max-w-2xl space-y-3 text-left text-sm leading-relaxed text-neutral-700">
+                    <p>
+                        Di <strong>Niskala Rasa</strong>, fokus pembelajaran diarahkan pada pengolahan{" "}
+                        <strong>rempah khas Indonesia</strong> dapat bergabung melalui kelas daring maupun praktik langsung di{" "}
+                        <strong>Makassar</strong>. Resep yang tersedia tetap mempertahankan{" "}
+                        <strong>resep khas Indonesia</strong> dan menyeleksi{" "}
+                        <strong>resep luar negeri yang menggunakan rempah khas Indonesia</strong>.
+                    </p>
+                    <p>
+                        Peran <strong>Guest</strong>, <strong>Student</strong>, dan <strong>Admin</strong> tetap
+                        berjalan seperti biasa, sementara <strong>Teacher</strong> dibagi ke empat jenjang (
+                        <strong>Basic</strong>, <strong>Intermediate</strong>, <strong>Advanced</strong>, dan{" "}
+                        <strong>Professional</strong>) dengan kewajiban melampirkan <strong>CV</strong> dan{" "}
+                        <strong>lisensi keprofesionalan</strong> saat pendaftaran.
+                    </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-3 pt-2">
                     <Link
                         href="/recipes"
-                        className="rounded-lg border border-emerald-700 px-4 py-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50"
+                        className="rounded-lg bg-emerald-700 px-5 py-2.5 text-xs font-semibold text-white hover:bg-emerald-800"
                     >
-                        Katalog Resep
-                    </Link>
-                    <Link
-                        href="/sessions"
-                        className="rounded-lg border border-neutral-200 px-4 py-2.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50"
-                    >
-                        Jadwal Kelas
+                        Browse Semua Resep
                     </Link>
                     <Link
                         href="/login"
-                        className="rounded-lg border border-neutral-200 px-4 py-2.5 text-xs font-semibold text-neutral-700 hover:bg-neutral-50"
+                        className="rounded-lg border border-emerald-700 px-5 py-2.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-50"
                     >
-                        Masuk / Daftar Guru
+                        Daftar Sebagai Teacher
                     </Link>
                 </div>
             </section>
 
-            <section className="space-y-4">
-                <div>
-                    <h2 className="text-lg font-bold text-neutral-900">
-                        Empat Jenjang Pengajar (Teacher)
-                    </h2>
+            <section className="space-y-5">
+                <div className="text-center space-y-1">
+                    <h2 className="text-2xl font-bold text-neutral-900">Empat Jenjang Pengajar</h2>
                     <p className="text-xs text-neutral-600">
-                        Setiap pendaftar Teacher melengkapi jenjang, Curriculum Vitae (CV), dan lisensi
-                        keprofesionalan untuk diverifikasi Admin.
+                        Struktur pengajaran bertahap dengan verifikasi CV dan lisensi keprofesionalan.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {TEACHER_LEVELS.map((item) => (
+                    {COURSE_FORMATS.map((item) => (
                         <div
-                            key={item.level}
-                            className="rounded-xl border border-neutral-200 bg-white p-4 space-y-1.5"
+                            key={item.title}
+                            className="flex flex-col justify-between rounded-xl border border-neutral-200 bg-white p-4 space-y-4"
                         >
-                            <span className="inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-bold text-emerald-800">
-                                {item.level}
+                        <div className="space-y-2">
+                            <span className="inline-block rounded bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-800">
+                                {item.badge}
                             </span>
+                            <h3 className="text-base font-bold text-neutral-900">{item.title}</h3>
                             <p className="text-xs leading-relaxed text-neutral-600">{item.desc}</p>
+                        </div>
+
+                        <Link
+                            href={item.href}
+                            className="text-xs font-semibold text-emerald-700 hover:underline"
+                        >
+                            {item.cta} →
+                        </Link>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section className="space-y-4 border-t pt-8">
+                <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-bold text-neutral-900">Agenda Kelas &amp; Praktik</h2>
+                    <Link href="/sessions" className="text-xs font-semibold text-emerald-700 hover:underline">
+                        Lihat Jadwal Lengkap →
+                    </Link>
+                </div>
+
+                <div className="divide-y rounded-xl border border-neutral-200 bg-white">
+                    {UPCOMING_SESSIONS.map((sesi) => (
+                        <div
+                            key={sesi.title}
+                            className="flex flex-col gap-1 p-4 sm:flex-row sm:items-center sm:justify-between"
+                        >
+                        <div>
+                            <span className="text-xs font-semibold text-emerald-700">{sesi.day}</span>
+                            <h3 className="text-sm font-bold text-neutral-900">{sesi.title}</h3>
+                        </div>
+                            <span className="text-xs text-neutral-500">{sesi.focus}</span>
                         </div>
                     ))}
                 </div>
@@ -91,3 +164,4 @@ export default function HomePage() {
         </main>
     );
 }
+
