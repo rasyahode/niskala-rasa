@@ -56,6 +56,42 @@ async function setupDatabase() {
       );
     `);
 
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS classes (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(180) UNIQUE NOT NULL,
+        teacher_name VARCHAR(120) NOT NULL,
+        teacher_level VARCHAR(20) NOT NULL DEFAULT 'basic',
+        indonesian_spice VARCHAR(120) NOT NULL,
+        schedule_label VARCHAR(120) NOT NULL,
+        recording_status VARCHAR(60) NOT NULL DEFAULT 'Diunggah untuk Siswa',
+        status VARCHAR(20) NOT NULL DEFAULT 'active',
+        created_at TIMESTAMP DEFAULT NOW()
+      );
+    `);
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS class_enrollments (
+        id SERIAL PRIMARY KEY,
+        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
+        user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        created_at TIMESTAMP DEFAULT NOW(),
+        UNIQUE (class_id, user_id)
+      );
+    `);
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS private_messages (
+        id SERIAL PRIMARY KEY,
+        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
+        sender_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        sender_name VARCHAR(120) NOT NULL,
+        sender_role VARCHAR(20) NOT NULL,
+        message TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT NOW()
+      );
+    `);
+
     const adminPass = await bcrypt.hash("admin123", 10);
     const teacherPass = await bcrypt.hash("teacher123", 10);
     const studentPass = await bcrypt.hash("student123", 10);
@@ -120,8 +156,43 @@ async function setupDatabase() {
       ON CONFLICT (title) DO NOTHING;
     `);
 
+    await client.query(`
+      INSERT INTO classes (
+        title, teacher_name, teacher_level, indonesian_spice, schedule_label, recording_status, status
+      )
+      VALUES
+        (
+          'Sangrai & Infusi Kayu Manis Kerinci untuk Hidangan Manis',
+          'Chef Basic',
+          'basic',
+          'Kayu Manis',
+          'Studio & Rekaman · Sabtu 09:00 WITA',
+          'Rekaman Full Terunggah',
+          'active'
+        ),
+        (
+          'Penerapan Andaliman & Asam Gelugur pada Resep Pilihan',
+          'Chef Basic',
+          'intermediate',
+          'Andaliman',
+          'Studio & Rekaman · Minggu 13:00 WITA',
+          'Rekaman Full Terunggah',
+          'active'
+        ),
+        (
+          'Kontrol Panas Pala Banda & Kluwek pada Kuah Berempah',
+          'Chef Basic',
+          'advanced',
+          'Pala',
+          'Studio & Rekaman · Rabu 16:00 WITA',
+          'Menunggu Upload Rekaman',
+          'active'
+        )
+      ON CONFLICT (title) DO NOTHING;
+    `);
+
     await client.query("COMMIT");
-    console.log("Setup database Niskala Rasa (50 rempah & resep) berhasil.");
+    console.log("Setup database Niskala Rasa berhasil.");
   } catch (error) {
     await client.query("ROLLBACK");
     console.error("Gagal setup database:", error);
