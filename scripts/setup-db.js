@@ -64,10 +64,16 @@ async function setupDatabase() {
         teacher_level VARCHAR(20) NOT NULL DEFAULT 'basic',
         indonesian_spice VARCHAR(120) NOT NULL,
         schedule_label VARCHAR(120) NOT NULL,
-        recording_status VARCHAR(60) NOT NULL DEFAULT 'Diunggah untuk Siswa',
+        recording_status VARCHAR(80) NOT NULL DEFAULT 'Menunggu Unggahan Video oleh Admin',
+        recording_url TEXT,
         status VARCHAR(20) NOT NULL DEFAULT 'active',
         created_at TIMESTAMP DEFAULT NOW()
       );
+    `);
+
+    await client.query(`
+      ALTER TABLE classes
+      ADD COLUMN IF NOT EXISTS recording_url TEXT;
     `);
 
     await client.query(`
@@ -158,7 +164,7 @@ async function setupDatabase() {
 
     await client.query(`
       INSERT INTO classes (
-        title, teacher_name, teacher_level, indonesian_spice, schedule_label, recording_status, status
+        title, teacher_name, teacher_level, indonesian_spice, schedule_label, recording_status, recording_url, status
       )
       VALUES
         (
@@ -167,7 +173,8 @@ async function setupDatabase() {
           'basic',
           'Kayu Manis',
           'Studio & Rekaman · Sabtu 09:00 WITA',
-          'Rekaman Full Terunggah',
+          'Video Pembelajaran Diunggah oleh Admin',
+          '/videos/kayu-manis-kerinci.mp4',
           'active'
         ),
         (
@@ -176,7 +183,8 @@ async function setupDatabase() {
           'intermediate',
           'Andaliman',
           'Studio & Rekaman · Minggu 13:00 WITA',
-          'Rekaman Full Terunggah',
+          'Video Pembelajaran Diunggah oleh Admin',
+          '/videos/andaliman-asam-gelugur.mp4',
           'active'
         ),
         (
@@ -185,7 +193,8 @@ async function setupDatabase() {
           'advanced',
           'Pala',
           'Studio & Rekaman · Rabu 16:00 WITA',
-          'Menunggu Upload Rekaman',
+          'Menunggu Unggahan Video oleh Admin',
+          NULL,
           'active'
         )
       ON CONFLICT (title) DO NOTHING;
