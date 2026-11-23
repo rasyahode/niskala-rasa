@@ -4,380 +4,414 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function LearningSpacePage() {
-    const [user, setUser] = useState(null);
-    const [classes, setClasses] = useState([]);
-    const [categories, setCategories] = useState([
-        "Rempah Nusantara",
-        "Resep Luar Negeri Berempah",
-        "Teknik Sangrai & Infusi",
-    ]);
-    const [enrolledIds, setEnrolledIds] = useState([]);
-    const [selectedClassId, setSelectedClassId] = useState(null);
-    const [materials, setMaterials] = useState([]);
-    const [completedIds, setCompletedIds] = useState([]);
-    const [discussions, setDiscussions] = useState([]);
-    const [messages, setMessages] = useState([]);
+  const [user, setUser] = useState(null);
+  const [classes, setClasses] = useState([]);
+  const [categories, setCategories] = useState([
+    "Rempah Nusantara",
+    "Resep Luar Negeri Berempah",
+    "Teknik Sangrai & Infusi",
+  ]);
+  const [enrolledIds, setEnrolledIds] = useState([]);
+  const [selectedClassId, setSelectedClassId] = useState(null);
+  const [materials, setMaterials] = useState([]);
+  const [completedIds, setCompletedIds] = useState([]);
+  const [discussions, setDiscussions] = useState([]);
+  const [messages, setMessages] = useState([]);
 
   // Form tambah kelas (Teacher & Admin)
-    const [title, setTitle] = useState("");
-    const [categoryName, setCategoryName] = useState("Rempah Nusantara");
-    const [startDate, setStartDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [indonesianSpice, setIndonesianSpice] = useState("Kayu Manis");
-    const [scheduleLabel, setScheduleLabel] = useState("Studio & Rekaman · Sabtu 10:00 WITA");
-    const [teacherLevel, setTeacherLevel] = useState("basic");
+  const [title, setTitle] = useState("");
+  const [categoryName, setCategoryName] = useState("Rempah Nusantara");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [indonesianSpice, setIndonesianSpice] = useState("Kayu Manis");
+  const [scheduleLabel, setScheduleLabel] = useState("Studio & Rekaman · Sabtu 10:00 WITA");
+  const [teacherLevel, setTeacherLevel] = useState("basic");
+
+  // Form tambah materi berurutan (Teacher & Admin)
+  const [matOrder, setMatOrder] = useState(3);
+  const [matTitle, setMatTitle] = useState("");
+  const [matBody, setMatBody] = useState("");
 
   // Form unggah video pembelajaran (Khusus Admin)
-    const [recordingClassId, setRecordingClassId] = useState(null);
-    const [recordingUrl, setRecordingUrl] = useState("");
+  const [recordingClassId, setRecordingClassId] = useState(null);
+  const [recordingUrl, setRecordingUrl] = useState("");
 
   // Forum diskusi per materi & chat privat ke guru
-    const [activeMaterialId, setActiveMaterialId] = useState(null);
-    const [discussionText, setDiscussionText] = useState("");
-    const [chatText, setChatText] = useState("");
+  const [activeMaterialId, setActiveMaterialId] = useState(null);
+  const [discussionText, setDiscussionText] = useState("");
+  const [chatText, setChatText] = useState("");
 
-    const [statusMsg, setStatusMsg] = useState("");
-    const [errorMsg, setErrorMsg] = useState("");
-    const [loading, setLoading] = useState(true);
+  const [statusMsg, setStatusMsg] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(true);
 
-    async function loadSpace(targetId = selectedClassId) {
-        setLoading(true);
-        try {
-            const query = targetId ? `?classId=${targetId}` : "";
-            const res = await fetch(`/api/classes${query}`, { cache: "no-store" });
-            const data = await res.json();
-            setUser(data.user || null);
-            const clsList = Array.isArray(data.classes) ? data.classes : [];
-            const matList = Array.isArray(data.materials) ? data.materials : [];
-            setClasses(clsList);
-            if (Array.isArray(data.categories) && data.categories.length > 0) {
-                setCategories(data.categories);
-            }
-            setEnrolledIds(Array.isArray(data.enrolledClassIds) ? data.enrolledClassIds : []);
-            setMaterials(matList);
-            setCompletedIds(Array.isArray(data.completedMaterialIds) ? data.completedMaterialIds : []);
-            setDiscussions(Array.isArray(data.discussions) ? data.discussions : []);
-            setMessages(Array.isArray(data.messages) ? data.messages : []);
+  async function loadSpace(targetId = selectedClassId) {
+    setLoading(true);
+    try {
+      const query = targetId ? `?classId=${targetId}` : "";
+      const res = await fetch(`/api/classes${query}`, { cache: "no-store" });
+      const data = await res.json();
+      setUser(data.user || null);
+      const clsList = Array.isArray(data.classes) ? data.classes : [];
+      const matList = Array.isArray(data.materials) ? data.materials : [];
+      setClasses(clsList);
+      if (Array.isArray(data.categories) && data.categories.length > 0) {
+        setCategories(data.categories);
+      }
+      setEnrolledIds(Array.isArray(data.enrolledClassIds) ? data.enrolledClassIds : []);
+      setMaterials(matList);
+      setCompletedIds(Array.isArray(data.completedMaterialIds) ? data.completedMaterialIds : []);
+      setDiscussions(Array.isArray(data.discussions) ? data.discussions : []);
+      setMessages(Array.isArray(data.messages) ? data.messages : []);
 
-            if (clsList.length > 0) {
-                if (!targetId) setSelectedClassId(clsList[0].id);
-                setRecordingClassId((prev) => prev || clsList[0].id);
-            }
-            if (matList.length > 0) {
-                setActiveMaterialId((prev) => prev || matList[0].id);
-            }
-        } catch {
-            setErrorMsg("Gagal memuat ruang belajar.");
-        } finally {
-            setLoading(false);
-            }
-        }
-
-    useEffect(() => {
-        loadSpace();
-    }, []);
-
-    async function postAction(payload) {
-        setStatusMsg("");
-        setErrorMsg("");
-        const res = await fetch("/api/classes", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-        });
-        const data = await res.json();
-        if (!res.ok) {
-            setErrorMsg(data.error || "Terjadi kesalahan.");
-            return false;
-        }
-        setStatusMsg(data.message || "Berhasil diperbarui.");
-        return true;
+      if (clsList.length > 0) {
+        if (!targetId) setSelectedClassId(clsList[0].id);
+        setRecordingClassId((prev) => prev || clsList[0].id);
+      }
+      if (matList.length > 0) {
+        setActiveMaterialId((prev) => prev || matList[0].id);
+        setMatOrder(matList.length + 1);
+      }
+    } catch {
+      setErrorMsg("Gagal memuat ruang belajar.");
+    } finally {
+      setLoading(false);
     }
+  }
 
-    async function handleCreateClass(e) {
-        e.preventDefault();
-        const ok = await postAction({
-        action: "create_class",
-            title,
-            category_name: categoryName,
-            start_date: startDate || null,
-            end_date: endDate || null,
-            indonesian_spice: indonesianSpice,
-            schedule_label: scheduleLabel,
-            teacher_level: teacherLevel,
-        });
-        if (ok) {
-            setTitle("");
-            setStartDate("");
-            setEndDate("");
-        await loadSpace();
-        }
-    }
+  useEffect(() => {
+    loadSpace();
+  }, []);
 
-    async function handleCancelClass(classId) {
-        const ok = await postAction({ action: "cancel_class", classId });
-        if (ok) await loadSpace(classId);
+  async function postAction(payload) {
+    setStatusMsg("");
+    setErrorMsg("");
+    const res = await fetch("/api/classes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      setErrorMsg(data.error || "Terjadi kesalahan.");
+      return false;
     }
+    setStatusMsg(data.message || "Berhasil diperbarui.");
+    return true;
+  }
 
-    async function handleUploadRecording(e) {
-        e.preventDefault();
-        if (!recordingClassId || !recordingUrl.trim()) return;
-        const ok = await postAction({
-            action: "upload_recording",
-            classId: recordingClassId,
-            recording_url: recordingUrl.trim(),
-        });
-        if (ok) {
-            setRecordingUrl("");
-            await loadSpace(recordingClassId);
-        }
+  async function handleCreateClass(e) {
+    e.preventDefault();
+    const ok = await postAction({
+      action: "create_class",
+      title,
+      category_name: categoryName,
+      start_date: startDate || null,
+      end_date: endDate || null,
+      indonesian_spice: indonesianSpice,
+      schedule_label: scheduleLabel,
+      teacher_level: teacherLevel,
+    });
+    if (ok) {
+      setTitle("");
+      setStartDate("");
+      setEndDate("");
+      await loadSpace();
     }
+  }
 
-    async function handleToggleEnroll(classId) {
-        const ok = await postAction({ action: "toggle_enrollment", classId });
-        if (ok) await loadSpace(classId);
-    }
+  async function handleCancelClass(classId) {
+    const ok = await postAction({ action: "cancel_class", classId });
+    if (ok) await loadSpace(classId);
+  }
 
-    async function handleMarkDone(materialId) {
-        const ok = await postAction({ action: "mark_material_done", materialId });
-        if (ok) await loadSpace(selectedClassId);
-    }
+  async function handleDeleteClass(classId) {
+    const ok = await postAction({ action: "delete_class", classId });
+    if (ok) await loadSpace();
+  }
 
-    function handleContinueNext() {
-        const nextMat = materials.find((m) => !completedIds.includes(Number(m.id)));
-        if (nextMat) {
-            setActiveMaterialId(nextMat.id);
-            setStatusMsg(`Melanjutkan ke materi: ${nextMat.title}`);
-        } else if (materials.length > 0) {
-            setActiveMaterialId(materials[0].id);
-            setStatusMsg("Seluruh materi pada kelas ini sudah selesai.");
-        }
+  async function handleAddMaterial(e) {
+    e.preventDefault();
+    if (!selectedClassId || !matTitle.trim() || !matBody.trim()) return;
+    const ok = await postAction({
+      action: "create_material",
+      classId: selectedClassId,
+      order_index: Number(matOrder) || 1,
+      title: matTitle.trim(),
+      content_body: matBody.trim(),
+    });
+    if (ok) {
+      setMatTitle("");
+      setMatBody("");
+      setMatOrder((prev) => Number(prev) + 1);
+      await loadSpace(selectedClassId);
     }
+  }
 
-    async function handleAddDiscussion(e) {
-        e.preventDefault();
-        if (!activeMaterialId || !discussionText.trim()) return;
-        const ok = await postAction({
-            action: "add_discussion",
-            materialId: activeMaterialId,
-            comment: discussionText.trim(),
-        });
-        if (ok) {
-            setDiscussionText("");
-            await loadSpace(selectedClassId);
-        }
-    }
+  async function handleDeleteMaterial(materialId) {
+    const ok = await postAction({ action: "delete_material", materialId });
+    if (ok) await loadSpace(selectedClassId);
+  }
 
-    async function handleSendChat(e) {
-        e.preventDefault();
-        if (!selectedClassId || !chatText.trim()) return;
-        const ok = await postAction({
-            action: "send_chat",
-            classId: selectedClassId,
-            message: chatText.trim(),
-        });
-        if (ok) {
-            setChatText("");
-            await loadSpace(selectedClassId);
-        }
+  async function handleUploadRecording(e) {
+    e.preventDefault();
+    if (!recordingClassId || !recordingUrl.trim()) return;
+    const ok = await postAction({
+      action: "upload_recording",
+      classId: recordingClassId,
+      recording_url: recordingUrl.trim(),
+    });
+    if (ok) {
+      setRecordingUrl("");
+      await loadSpace(recordingClassId);
     }
+  }
 
-    if (loading) {
-        return (
-            <main className="mx-auto max-w-5xl px-4 py-12">
-                <p className="text-sm text-neutral-600">Memuat Ruang Belajar...</p>
-            </main>
-        );
+  async function handleToggleEnroll(classId) {
+    const ok = await postAction({ action: "toggle_enrollment", classId });
+    if (ok) await loadSpace(classId);
+  }
+
+  async function handleMarkDone(materialId) {
+    const ok = await postAction({ action: "mark_material_done", materialId });
+    if (ok) await loadSpace(selectedClassId);
+  }
+
+  function handleContinueNext() {
+    const nextMat = materials.find((m) => !completedIds.includes(Number(m.id)));
+    if (nextMat) {
+      setActiveMaterialId(nextMat.id);
+      setStatusMsg(`Melanjutkan ke materi: ${nextMat.title}`);
+    } else if (materials.length > 0) {
+      setActiveMaterialId(materials[0].id);
+      setStatusMsg("Seluruh materi pada kelas ini sudah selesai.");
     }
+  }
+
+  async function handleAddDiscussion(e) {
+    e.preventDefault();
+    if (!activeMaterialId || !discussionText.trim()) return;
+    const ok = await postAction({
+      action: "add_discussion",
+      materialId: activeMaterialId,
+      comment: discussionText.trim(),
+    });
+    if (ok) {
+      setDiscussionText("");
+      await loadSpace(selectedClassId);
+    }
+  }
+
+  async function handleSendChat(e) {
+    e.preventDefault();
+    if (!selectedClassId || !chatText.trim()) return;
+    const ok = await postAction({
+      action: "send_chat",
+      classId: selectedClassId,
+      message: chatText.trim(),
+    });
+    if (ok) {
+      setChatText("");
+      await loadSpace(selectedClassId);
+    }
+  }
+
+  if (loading) {
+    return (
+      <main className="mx-auto max-w-5xl px-4 py-12">
+        <p className="text-sm text-neutral-600">Memuat Ruang Belajar...</p>
+      </main>
+    );
+  }
 
   // Guest tidak bisa membuka ruang belajar
-    if (!user) {
-        return (
-        <main className="mx-auto max-w-2xl px-4 py-16">
-            <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-center space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
-                    Akses Terbatas · Ruang Belajar
-                </p>
-                <h1 className="text-2xl font-bold text-neutral-900">
-                    Guest Tidak Dapat Membuka Ruang Belajar
-                </h1>
-                <p className="text-sm text-neutral-600">
-                    Silakan masuk menggunakan akun Student, Teacher, atau Admin untuk mengakses kelas,
-                    materi, video pembelajaran, dan chat privat bersama guru.
-                </p>
-                <div className="pt-2">
-                    <Link
-                        href="/login"
-                        className="inline-block rounded-lg bg-emerald-700 px-5 py-2.5 text-xs font-semibold text-white hover:bg-emerald-800"
-                    >
-                        Masuk / Daftar Akun
-                    </Link>
-                </div>
-            </div>
-        </main>
-        );
-    }
-
-    const activeClasses = classes.filter((c) => c.status !== "cancelled");
-    const selectedClasses = activeClasses.filter((c) => enrolledIds.includes(Number(c.id)));
-    const unselectedClasses = activeClasses.filter((c) => !enrolledIds.includes(Number(c.id)));
-    const canManageClasses = ["teacher", "admin"].includes(user.role);
-
-    const progressPercent =
-        materials.length > 0
-        ? Math.round(
-            (materials.filter((m) => completedIds.includes(Number(m.id))).length / materials.length) *
-                100
-            )
-        : 0;
-
+  if (!user) {
     return (
-        <main className="mx-auto max-w-5xl px-4 py-10 space-y-8">
-            <div className="border-b pb-5 space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
-                    Ruang Belajar · {user.username} ({user.role})
-                </p>
-                <h1 className="text-2xl font-bold text-neutral-900">
-                    Kelas Studio, Materi, Progres &amp; Rekaman Pembelajaran
-                </h1>
-                <p className="text-sm text-neutral-600">
-                    Kelas berlangsung satu kali di studio (pengajaran langsung bagi peserta di studio),
-                    direkam penuh tanpa live streaming, dan video pembelajarannya diunggah oleh Admin.
-                </p>
-            </div>
+      <main className="mx-auto max-w-2xl px-4 py-16">
+        <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-center space-y-4">
+          <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
+            Akses Terbatas · Ruang Belajar
+          </p>
+          <h1 className="text-2xl font-bold text-neutral-900">
+            Guest Tidak Dapat Membuka Ruang Belajar
+          </h1>
+          <p className="text-sm text-neutral-600">
+            Silakan masuk menggunakan akun Student, Teacher, atau Admin untuk mengakses kelas,
+            materi, video pembelajaran, dan chat privat bersama guru.
+          </p>
+          <div className="pt-2">
+            <Link
+              href="/login"
+              className="inline-block rounded-lg bg-emerald-700 px-5 py-2.5 text-xs font-semibold text-white hover:bg-emerald-800"
+            >
+              Masuk / Daftar Akun
+            </Link>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
-            {statusMsg && (
-                <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-xs font-medium text-emerald-900">
-                    {statusMsg}
-                </div>
-            )}
-            {errorMsg && (
-                <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-xs font-medium text-red-700">
-                    {errorMsg}
-                </div>
-            )}
+  const activeClasses = classes.filter((c) => c.status !== "cancelled");
+  const selectedClasses = activeClasses.filter((c) => enrolledIds.includes(Number(c.id)));
+  const unselectedClasses = activeClasses.filter((c) => !enrolledIds.includes(Number(c.id)));
+  const canManageClasses = ["teacher", "admin"].includes(user.role);
+
+  const progressPercent =
+    materials.length > 0
+      ? Math.round(
+          (materials.filter((m) => completedIds.includes(Number(m.id))).length / materials.length) *
+            100
+        )
+      : 0;
+
+  return (
+    <main className="mx-auto max-w-5xl px-4 py-10 space-y-8">
+      <div className="border-b pb-5 space-y-2">
+        <p className="text-xs font-semibold uppercase tracking-wider text-emerald-700">
+          Ruang Belajar · {user.username} ({user.role})
+        </p>
+        <h1 className="text-2xl font-bold text-neutral-900">
+          Kelas Studio, Materi, Progres &amp; Rekaman Pembelajaran
+        </h1>
+        <p className="text-sm text-neutral-600">
+          Kelas berlangsung satu kali di studio (pengajaran langsung bagi peserta di studio),
+          direkam penuh tanpa live streaming, dan video pembelajarannya diunggah oleh Admin.
+        </p>
+      </div>
+
+      {statusMsg && (
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2.5 text-xs font-medium text-emerald-900">
+          {statusMsg}
+        </div>
+      )}
+      {errorMsg && (
+        <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-xs font-medium text-red-700">
+          {errorMsg}
+        </div>
+      )}
 
       {/* Teacher & Admin: Tambah Kelas (Kategori & Rentang Waktu Opsional) */}
-            {canManageClasses && (
-                <section className="rounded-xl border border-neutral-200 bg-white p-5 space-y-4">
-                    <h2 className="text-base font-bold text-neutral-900">
-                        Tambah Kelas Baru ({user.role === "admin" ? "Admin" : "Teacher"})
-                    </h2>
-                    <form onSubmit={handleCreateClass} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        <input
-                            type="text"
-                            required
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                            placeholder="Judul kelas pengolahan rempah Indonesia"
-                            className="rounded-lg border px-3 py-2 text-sm"
-                        />
-                        <select
-                            value={categoryName}
-                            onChange={(e) => setCategoryName(e.target.value)}
-                            className="rounded-lg border bg-white px-3 py-2 text-sm"
-                        >
-                        {categories.map((cat) => (
-                            <option key={cat} value={cat}>
-                                Kategori: {cat}
-                            </option>
-                        ))}
-                        </select>
-                        <input
-                            type="text"
-                            required
-                            value={indonesianSpice}
-                            onChange={(e) => setIndonesianSpice(e.target.value)}
-                            placeholder="Rempah khas Indonesia (misal: Kayu Manis)"
-                            className="rounded-lg border px-3 py-2 text-sm"
-                            />
-                            <select
-                                value={teacherLevel}
-                                onChange={(e) => setTeacherLevel(e.target.value)}
-                                className="rounded-lg border bg-white px-3 py-2 text-sm"
-                            >
-                                <option value="basic">Basic</option>
-                                <option value="intermediate">Intermediate</option>
-                                <option value="advanced">Advanced</option>
-                                <option value="professional">Professional</option>
-                            </select>
-                            <input
-                                type="text"
-                                required
-                                value={scheduleLabel}
-                                onChange={(e) => setScheduleLabel(e.target.value)}
-                                placeholder="Jadwal studio & unggahan rekaman"
-                                className="rounded-lg border px-3 py-2 text-sm sm:col-span-2"
-                                />
-                                <div className="space-y-1">
-                                    <label className="text-[11px] text-neutral-500">
-                                        Tanggal Mulai (Opsional / Kosongkan untuk Lifetime Access)
-                                    </label>
-                                    <input
-                                        type="date"
-                                        value={startDate}
-                                        onChange={(e) => setStartDate(e.target.value)}
-                                        className="w-full rounded-lg border px-3 py-2 text-xs"
-                                    />
-                                </div>
-                                <div className="space-y-1">
-                                    <label className="text-[11px] text-neutral-500">
-                                        Tanggal Selesai (Opsional / Kosongkan untuk Lifetime Access)
-                                    </label>
-                                <input
-                                    type="date"
-                                    value={endDate}
-                                    onChange={(e) => setEndDate(e.target.value)}
-                                    className="w-full rounded-lg border px-3 py-2 text-xs"
-                                />
-                                </div>
-                                <div className="sm:col-span-2">
-                                    <button
-                                        type="submit"
-                                        className="rounded-lg bg-emerald-700 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-800"
-                                    >
-                                        Simpan Kelas Baru
-                                    </button>
-                                </div>
-                        </form>
-                    </section>
-                )}
+      {canManageClasses && (
+        <section className="rounded-xl border border-neutral-200 bg-white p-5 space-y-4">
+          <h2 className="text-base font-bold text-neutral-900">
+            Tambah Kelas Baru ({user.role === "admin" ? "Admin" : "Teacher"})
+          </h2>
+          <form onSubmit={handleCreateClass} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <input
+              type="text"
+              required
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Judul kelas pengolahan rempah Indonesia"
+              className="rounded-lg border px-3 py-2 text-sm"
+            />
+            <select
+              value={categoryName}
+              onChange={(e) => setCategoryName(e.target.value)}
+              className="rounded-lg border bg-white px-3 py-2 text-sm"
+            >
+              {categories.map((cat) => (
+                <option key={cat} value={cat}>
+                  Kategori: {cat}
+                </option>
+              ))}
+            </select>
+            <input
+              type="text"
+              required
+              value={indonesianSpice}
+              onChange={(e) => setIndonesianSpice(e.target.value)}
+              placeholder="Rempah khas Indonesia (misal: Kayu Manis)"
+              className="rounded-lg border px-3 py-2 text-sm"
+            />
+            <select
+              value={teacherLevel}
+              onChange={(e) => setTeacherLevel(e.target.value)}
+              className="rounded-lg border bg-white px-3 py-2 text-sm"
+            >
+              <option value="basic">Basic</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+              <option value="professional">Professional</option>
+            </select>
+            <input
+              type="text"
+              required
+              value={scheduleLabel}
+              onChange={(e) => setScheduleLabel(e.target.value)}
+              placeholder="Jadwal studio & unggahan rekaman"
+              className="rounded-lg border px-3 py-2 text-sm sm:col-span-2"
+            />
+            <div className="space-y-1">
+              <label className="text-[11px] text-neutral-500">
+                Tanggal Mulai (Opsional / Kosongkan untuk Lifetime Access)
+              </label>
+              <input
+                type="date"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+                className="w-full rounded-lg border px-3 py-2 text-xs"
+              />
+            </div>
+            <div className="space-y-1">
+              <label className="text-[11px] text-neutral-500">
+                Tanggal Selesai (Opsional / Kosongkan untuk Lifetime Access)
+              </label>
+              <input
+                type="date"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                className="w-full rounded-lg border px-3 py-2 text-xs"
+              />
+            </div>
+            <div className="sm:col-span-2">
+              <button
+                type="submit"
+                className="rounded-lg bg-emerald-700 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-800"
+              >
+                Simpan Kelas Baru
+              </button>
+            </div>
+          </form>
+        </section>
+      )}
 
       {/* Khusus Admin: Unggah Video Rekaman Pembelajaran */}
-                {user.role === "admin" && (
-                    <section className="rounded-xl border border-emerald-200 bg-white p-5 space-y-3">
-                        <h2 className="text-base font-bold text-neutral-900">
-                            Unggah Video Pembelajaran (Khusus Admin)
-                        </h2>
-                        <form onSubmit={handleUploadRecording} className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                            <select
-                                value={recordingClassId || ""}
-                                onChange={(e) => setRecordingClassId(Number(e.target.value))}
-                                className="rounded-lg border bg-white px-3 py-2 text-xs"
-                            >
-                                {classes.map((c) => (
-                                    <option key={c.id} value={c.id}>
-                                        {c.title}
-                                    </option>
-                                ))}
-                            </select>
-                            <input
-                                type="text"
-                                required
-                                value={recordingUrl}
-                                onChange={(e) => setRecordingUrl(e.target.value)}
-                                placeholder="URL video (misal: /videos/kayu-manis.mp4)"
-                                className="rounded-lg border px-3 py-2 text-xs"
-                            />
-                            <button
-                                type="submit"
-                                className="rounded-lg bg-emerald-700 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-800"
-                            >
-                                Unggah Video
-                            </button>
-                        </form>
-                    </section>
-                )}
+      {user.role === "admin" && (
+        <section className="rounded-xl border border-emerald-200 bg-white p-5 space-y-3">
+          <h2 className="text-base font-bold text-neutral-900">
+            Unggah Video Pembelajaran (Khusus Admin)
+          </h2>
+          <form onSubmit={handleUploadRecording} className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <select
+              value={recordingClassId || ""}
+              onChange={(e) => setRecordingClassId(Number(e.target.value))}
+              className="rounded-lg border bg-white px-3 py-2 text-xs"
+            >
+              {classes.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.title}
+                </option>
+              ))}
+            </select>
+            <input
+              type="text"
+              required
+              value={recordingUrl}
+              onChange={(e) => setRecordingUrl(e.target.value)}
+              placeholder="URL video (misal: /videos/kayu-manis.mp4)"
+              className="rounded-lg border px-3 py-2 text-xs"
+            />
+            <button
+              type="submit"
+              className="rounded-lg bg-emerald-700 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-800"
+            >
+              Unggah Video
+            </button>
+          </form>
+        </section>
+      )}
 
       {/* Student: Kelas yang Sudah Dipilih vs Belum Dipilih */}
       {user.role === "student" && (
@@ -456,7 +490,7 @@ export default function LearningSpacePage() {
         </div>
       )}
 
-      {/* Daftar Seluruh Kelas (Termasuk Tombol Batalkan Kelas untuk Teacher & Admin) */}
+      {/* Daftar Seluruh Kelas (Batalkan & Hapus Kelas untuk Teacher & Admin) */}
       <section className="rounded-xl border border-neutral-200 bg-white p-5 space-y-3">
         <h2 className="text-base font-bold text-neutral-900">Daftar Seluruh Kelas</h2>
         <div className="divide-y">
@@ -478,11 +512,13 @@ export default function LearningSpacePage() {
                   </p>
                   <p className="text-xs text-neutral-600">
                     Kategori: {cls.category_name || "Rempah Nusantara"} · Guru: {cls.teacher_name} ·{" "}
-                    {cls.start_date ? `${cls.start_date} s/d ${cls.end_date || "-"}` : "Lifetime Access"}
+                    {cls.start_date
+                      ? `${cls.start_date} s/d ${cls.end_date || "-"}`
+                      : "Lifetime Access"}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <button
                     type="button"
                     onClick={() => {
@@ -497,9 +533,18 @@ export default function LearningSpacePage() {
                     <button
                       type="button"
                       onClick={() => handleCancelClass(cls.id)}
-                      className="rounded bg-red-600 px-3 py-1 text-xs font-semibold text-white hover:bg-red-700"
+                      className="rounded bg-amber-600 px-3 py-1 text-xs font-semibold text-white hover:bg-amber-700"
                     >
                       Batalkan Kelas
+                    </button>
+                  )}
+                  {canManageClasses && (
+                    <button
+                      type="button"
+                      onClick={() => handleDeleteClass(cls.id)}
+                      className="rounded bg-red-600 px-3 py-1 text-xs font-semibold text-white hover:bg-red-700"
+                    >
+                      Hapus Kelas
                     </button>
                   )}
                 </div>
@@ -509,7 +554,7 @@ export default function LearningSpacePage() {
         </div>
       </section>
 
-      {/* Materi, Progres ("Mark as Done" / "Lanjutkan") & Forum Diskusi per Materi */}
+      {/* Materi, Progres ("Mark as Done" / "Lanjutkan"), Kelola Materi & Forum Diskusi */}
       <section className="rounded-xl border border-neutral-200 bg-white p-5 space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div>
@@ -528,6 +573,46 @@ export default function LearningSpacePage() {
             Lanjutkan
           </button>
         </div>
+
+        {/* Form Tambah Materi Berurutan (Teacher & Admin) */}
+        {canManageClasses && (
+          <form
+            onSubmit={handleAddMaterial}
+            className="rounded-lg border border-emerald-100 bg-emerald-50/30 p-3.5 grid grid-cols-1 gap-2 sm:grid-cols-6"
+          >
+            <input
+              type="number"
+              min={1}
+              required
+              value={matOrder}
+              onChange={(e) => setMatOrder(e.target.value)}
+              placeholder="Urutan"
+              className="rounded-lg border bg-white px-2.5 py-1.5 text-xs sm:col-span-1"
+            />
+            <input
+              type="text"
+              required
+              value={matTitle}
+              onChange={(e) => setMatTitle(e.target.value)}
+              placeholder="Judul materi baru"
+              className="rounded-lg border bg-white px-2.5 py-1.5 text-xs sm:col-span-2"
+            />
+            <input
+              type="text"
+              required
+              value={matBody}
+              onChange={(e) => setMatBody(e.target.value)}
+              placeholder="Isi ringkas materi"
+              className="rounded-lg border bg-white px-2.5 py-1.5 text-xs sm:col-span-2"
+            />
+            <button
+              type="submit"
+              className="rounded-lg bg-emerald-700 px-3 py-1.5 text-xs font-semibold text-white hover:bg-emerald-800 sm:col-span-1"
+            >
+              + Materi
+            </button>
+          </form>
+        )}
 
         <div className="space-y-3">
           {materials.map((mat) => {
@@ -551,7 +636,7 @@ export default function LearningSpacePage() {
                       </span>
                     )}
                   </h3>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     <button
                       type="button"
                       onClick={() => handleMarkDone(mat.id)}
@@ -566,12 +651,20 @@ export default function LearningSpacePage() {
                     >
                       Diskusi Materi ({matDiscs.length})
                     </button>
+                    {canManageClasses && (
+                      <button
+                        type="button"
+                        onClick={() => handleDeleteMaterial(mat.id)}
+                        className="rounded bg-red-600 px-2.5 py-1 text-xs font-semibold text-white hover:bg-red-700"
+                      >
+                        Hapus Materi
+                      </button>
+                    )}
                   </div>
                 </div>
 
                 <p className="text-xs leading-relaxed text-neutral-700">{mat.content_body}</p>
 
-                {/* Forum diskusi (kolom komentar) di bagian bawah tiap materi */}
                 <div className="rounded-lg bg-neutral-50 p-3 space-y-2 text-xs">
                   <p className="font-semibold text-neutral-800">Forum Diskusi Materi:</p>
                   {matDiscs.length === 0 ? (
