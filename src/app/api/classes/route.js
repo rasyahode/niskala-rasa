@@ -6,6 +6,9 @@ const FALLBACK_CLASSES = [
     {
         id: 1,
         title: "Sangrai & Infusi Kayu Manis Kerinci untuk Hidangan Manis",
+        category_name: "Teknik Sangrai & Infusi",
+        start_date: null,
+        end_date: null,
         teacher_name: "Chef Basic",
         teacher_level: "basic",
         indonesian_spice: "Kayu Manis",
@@ -14,16 +17,22 @@ const FALLBACK_CLASSES = [
         recording_url: "/videos/kayu-manis-kerinci.mp4",
         status: "active",
     },
+];
+
+const FALLBACK_MATERIALS = [
+    {
+        id: 1,
+        class_id: 1,
+        order_index: 1,
+        title: "Pengenalan Karakter & Seleksi Rempah",
+        content_body: "Pelajari aroma, bagian tanaman, serta cara memilih rempah khas Indonesia sebelum diolah.",
+    },
     {
         id: 2,
-        title: "Penerapan Andaliman & Asam Gelugur pada Resep Pilihan",
-        teacher_name: "Chef Basic",
-        teacher_level: "intermediate",
-        indonesian_spice: "Andaliman",
-        schedule_label: "Studio & Rekaman · Minggu 13:00 WITA",
-        recording_status: "Menunggu Unggahan Video oleh Admin",
-        recording_url: null,
-        status: "active",
+        class_id: 1,
+        order_index: 2,
+        title: "Teknik Pengolahan & Penerapan Resep",
+        content_body: "Ikuti panduan pengolahan rempah serta saksikan rekaman penuh kelas studio.",
     },
 ];
 
@@ -46,42 +55,86 @@ export async function GET(request) {
         const classIdParam = Number(searchParams.get("classId") || 0);
 
         let classes = [];
+        let categories = ["Rempah Nusantara", "Resep Luar Negeri Berempah", "Teknik Sangrai & Infusi"];
         let enrolledClassIds = [];
+        let materials = [];
+        let completedMaterialIds = [];
+        let discussions = [];
         let messages = [];
 
         try {
-            const clsRes = await pool.query("SELECT * FROM classes ORDER BY id DESC");
+            const [clsRes, catRes] = await Promise.all([
+                pool.query("SELECT * FROM classes ORDER BY id DESC"),
+                pool.query("SELECT name FROM categories ORDER BY id ASC"),
+            ]);
             classes = clsRes.rows;
-
-            if (user) {
-                const enrRes = await pool.query(
-                "SELECT class_id FROM class_enrollments WHERE user_id = $1",
-                [user.id]
-                );
-                enrolledClassIds = enrRes.rows.map((r) => Number(r.class_id));
+            if (catRes.rows.length > 0) {
+                categories = catRes.rows.map((r) => r.name);
             }
 
             const targetClassId = classIdParam || classes[0]?.id || 0;
-            if (targetClassId && user) {
-                const msgRes = await pool.query(
-                `
-                SELECT id, class_id, sender_id, sender_name, sender_role, message, created_at
-                FROM private_messages
-                WHERE class_id = $1 AND (sender_id = $2 OR $3 IN ('teacher', 'admin'))
-                ORDER BY id ASC
-                `,
-                [targetClassId, user.id, user.role]
-            );
-                messages = msgRes.rows;
+
+            if (user) {
+                const enrRes = await pool.query(
+                    "SELECT class_id FROM class_enrollments WHERE user_id = $1",
+                    [user.id]
+                );
+                enrolledClassIds = enrRes.rows.map((r) => Number(r.class_id));
+
+                const progRes = await pool.query(
+                    "SELECT material_id FROM class_material_progress WHERE user_id = $1",
+                    [user.id]
+                );
+                completedMaterialIds = progRes.rows.map((r) => Number(r.material_id));
+            }
+
+            if (targetClassId) {
+                const matRes = await pool.query(
+                    "SELECT * FROM class_materials WHERE class_id = $1 ORDER BY order_index ASC, id ASC",
+                    [targetClassId]
+                );
+                materials = matRes.rows;
+
+                if (materials.length > 0) {
+                    const matIds = materials.map((m) => m.id);
+                    const discRes = await pool.query(
+                        `
+                        SELECT id, material_id, sender_name, sender_role, comment, created_at
+                        FROM material_discussions
+                        WHERE material_id = ANY($1::int[])
+                        ORDER BY id ASC
+                        `,
+                        [matIds]
+                    );
+                    discussions = discRes.rows;
+                }
+
+                if (user) {
+                    const msgRes = await pool.query(
+                        `
+                        SELECT id, class_id, sender_id, sender_name, sender_role, message, created_at
+                        FROM private_messages
+                        WHERE class_id = $1 AND (sender_id = $2 OR $3 IN ('teacher', 'admin'))
+                        ORDER BY id ASC
+                        `,
+                        [targetClassId, user.id, user.role]
+                    );
+                    messages = msgRes.rows;
+                }
             }
         } catch {
             classes = FALLBACK_CLASSES;
+            materials = FALLBACK_MATERIALS;
         }
 
         return NextResponse.json({
             user,
             classes,
+            categories,
             enrolledClassIds,
+            materials,
+            completedMaterialIds,
+            discussions,
             messages,
         });
     } catch (error) {
@@ -106,6 +159,7 @@ export async function POST(request) {
     const body = await request.json();
     const action = String(body.action || "");
 
+    // Teacher & Admin: menambah kelas (dengan kategori & rentang waktu opsional)
     if (action === "create_class") {
         if (!["teacher", "admin"].includes(user.role)) {
             return NextResponse.json(
@@ -115,11 +169,12 @@ export async function POST(request) {
         }
 
         const title = String(body.title || "").trim();
+        const categoryName = String(body.category_name || "Rempah Nusantara").trim();
+        const startDate = body.start_date ? String(body.start_date) : null;
+        const endDate = body.end_date ? String(body.end_date) : null;
         const indonesianSpice = String(body.indonesian_spice || "").trim();
         const scheduleLabel = String(body.schedule_label || "").trim();
-        const teacherLevel = String(
-            body.teacher_level || user.teacher_level || "basic"
-        )
+        const teacherLevel = String(body.teacher_level || user.teacher_level || "basic")
             .trim()
             .toLowerCase();
 
@@ -133,56 +188,75 @@ export async function POST(request) {
         const inserted = await pool.query(
             `
             INSERT INTO classes (
-            title, teacher_name, teacher_level, indonesian_spice,
-            schedule_label, recording_status, recording_url, status
+            title, category_name, start_date, end_date, teacher_name, teacher_level,
+            indonesian_spice, schedule_label, recording_status, recording_url, status
             )
-            VALUES ($1, $2, $3, $4, $5, 'Menunggu Unggahan Video oleh Admin', NULL, 'active')
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, 'Menunggu Unggahan Video oleh Admin', NULL, 'active')
             RETURNING *
             `,
-            [title, user.username, teacherLevel, indonesianSpice, scheduleLabel]
+            [
+                title,
+                categoryName,
+                startDate,
+                endDate,
+                user.username,
+                teacherLevel,
+                indonesianSpice,
+                scheduleLabel,
+            ]
+        );
+
+        await pool.query(
+            `
+            INSERT INTO class_materials (class_id, order_index, title, content_body)
+            VALUES
+            ($1, 1, 'Pengenalan Karakter & Seleksi Rempah', 'Materi dasar pengenalan rempah khas Indonesia pada kelas ini.'),
+            ($1, 2, 'Pengolahan & Rekaman Studio', 'Panduan teknik pengolahan serta rekaman penuh kelas studio.')
+            `,
+            [inserted.rows[0].id]
         );
 
         return NextResponse.json(
             { message: "Kelas baru berhasil ditambahkan.", classItem: inserted.rows[0] },
             { status: 201 }
         );
-    }
-
-    if (action === "cancel_class") {
-        if (!["teacher", "admin"].includes(user.role)) {
-            return NextResponse.json(
-                { error: "Hanya Teacher dan Admin yang dapat membatalkan kelas." },
-                { status: 403 }
-            );
         }
 
-        const classId = Number(body.classId);
+        if (action === "cancel_class") {
+            if (!["teacher", "admin"].includes(user.role)) {
+                return NextResponse.json(
+                    { error: "Hanya Teacher dan Admin yang dapat membatalkan kelas." },
+                    { status: 403 }
+                );
+            }
+
+            const classId = Number(body.classId);
             if (!classId) {
                 return NextResponse.json({ error: "ID kelas tidak valid." }, { status: 400 });
+            }
+
+            const updated = await pool.query(
+                `
+                UPDATE classes
+                SET status = 'cancelled'
+                WHERE id = $1
+                RETURNING *
+                `,
+                [classId]
+            );
+
+            return NextResponse.json({
+                message: "Kelas berhasil dibatalkan.",
+                classItem: updated.rows[0],
+            });
         }
 
-        const updated = await pool.query(
-            `
-            UPDATE classes
-            SET status = 'cancelled'
-            WHERE id = $1
-            RETURNING *
-            `,
-            [classId]
-        );
-
-        return NextResponse.json({
-            message: "Kelas berhasil dibatalkan.",
-            classItem: updated.rows[0],
-        });
-    }
-
-    if (action === "upload_recording") {
-        if (user.role !== "admin") {
-            return NextResponse.json(
-                { error: "Hanya Admin yang dapat mengunggah video pembelajaran." },
-                { status: 403 }
-            );
+        if (action === "upload_recording") {
+            if (user.role !== "admin") {
+                return NextResponse.json(
+                    { error: "Hanya Admin yang dapat mengunggah video pembelajaran." },
+                    { status: 403 }
+                );
         }
 
         const classId = Number(body.classId);
@@ -242,8 +316,51 @@ export async function POST(request) {
             [classId, user.id]
         );
         return NextResponse.json({ message: "Kelas berhasil dipilih." });
+    }
+
+    // Student: menandai materi selesai (Mark as Done)
+    if (action === "mark_material_done") {
+        const materialId = Number(body.materialId);
+        if (!materialId) {
+            return NextResponse.json({ error: "ID materi tidak valid." }, { status: 400 });
         }
 
+        await pool.query(
+            `
+            INSERT INTO class_material_progress (material_id, user_id)
+            VALUES ($1, $2)
+            ON CONFLICT (material_id, user_id) DO NOTHING
+            `,
+            [materialId, user.id]
+        );
+
+        return NextResponse.json({ message: "Materi ditandai selesai." });
+    }
+
+    // Forum diskusi per materi
+    if (action === "add_discussion") {
+        const materialId = Number(body.materialId);
+        const comment = String(body.comment || "").trim();
+
+        if (!materialId || !comment) {
+            return NextResponse.json(
+            { error: "Pilih materi dan isi komentar diskusi." },
+            { status: 400 }
+            );
+        }
+
+        await pool.query(
+            `
+            INSERT INTO material_discussions (material_id, sender_id, sender_name, sender_role, comment)
+            VALUES ($1, $2, $3, $4, $5)
+            `,
+            [materialId, user.id, user.username, user.role, comment]
+        );
+
+        return NextResponse.json({ message: "Komentar diskusi terkirim." }, { status: 201 });
+    }
+
+    // Chat privat ke guru pengampu kelas
     if (action === "send_chat") {
         const classId = Number(body.classId);
         const message = String(body.message || "").trim();
