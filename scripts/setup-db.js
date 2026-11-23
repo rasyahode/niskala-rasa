@@ -30,6 +30,13 @@ async function setupDatabase() {
       ADD COLUMN IF NOT EXISTS professional_license TEXT;
     `);
 
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS categories (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) UNIQUE NOT NULL
+      );
+    `);
+
     await client.query(`DROP TABLE IF EXISTS spices CASCADE;`);
     await client.query(`
       CREATE TABLE spices (
@@ -60,6 +67,9 @@ async function setupDatabase() {
       CREATE TABLE IF NOT EXISTS classes (
         id SERIAL PRIMARY KEY,
         title VARCHAR(180) UNIQUE NOT NULL,
+        category_name VARCHAR(100) NOT NULL DEFAULT 'Rempah Nusantara',
+        start_date DATE,
+        end_date DATE,
         teacher_name VARCHAR(120) NOT NULL,
         teacher_level VARCHAR(20) NOT NULL DEFAULT 'basic',
         indonesian_spice VARCHAR(120) NOT NULL,
@@ -73,7 +83,42 @@ async function setupDatabase() {
 
     await client.query(`
       ALTER TABLE classes
+      ADD COLUMN IF NOT EXISTS category_name VARCHAR(100) DEFAULT 'Rempah Nusantara',
+      ADD COLUMN IF NOT EXISTS start_date DATE,
+      ADD COLUMN IF NOT EXISTS end_date DATE,
       ADD COLUMN IF NOT EXISTS recording_url TEXT;
+    `);
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS class_materials (
+        id SERIAL PRIMARY KEY,
+        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
+        order_index INT NOT NULL DEFAULT 1,
+        title VARCHAR(180) NOT NULL,
+        content_body TEXT NOT NULL
+      );
+    `);
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS class_material_progress (
+        id SERIAL PRIMARY KEY,
+        material_id INT NOT NULL REFERENCES class_materials(id) ON DELETE CASCADE,
+        user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        completed_at TIMESTAMP DEFAULT NOW(),
+        UNIQUE (material_id, user_id)
+      );
+    `);
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS material_discussions (
+        id SERIAL PRIMARY KEY,
+        material_id INT NOT NULL REFERENCES class_materials(id) ON DELETE CASCADE,
+        sender_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        sender_name VARCHAR(120) NOT NULL,
+        sender_role VARCHAR(20) NOT NULL,
+        comment TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT NOW()
+      );
     `);
 
     await client.query(`
@@ -96,6 +141,16 @@ async function setupDatabase() {
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT NOW()
       );
+    `);
+
+    await client.query(`
+      INSERT INTO categories (name)
+      VALUES
+        ('Rempah Nusantara'),
+        ('Resep Luar Negeri Berempah'),
+        ('Teknik Sangrai & Infusi'),
+        ('Praktik Studio Makassar')
+      ON CONFLICT (name) DO NOTHING;
     `);
 
     const adminPass = await bcrypt.hash("admin123", 10);
@@ -164,11 +219,15 @@ async function setupDatabase() {
 
     await client.query(`
       INSERT INTO classes (
-        title, teacher_name, teacher_level, indonesian_spice, schedule_label, recording_status, recording_url, status
+        title, category_name, start_date, end_date, teacher_name, teacher_level,
+        indonesian_spice, schedule_label, recording_status, recording_url, status
       )
       VALUES
         (
           'Sangrai & Infusi Kayu Manis Kerinci untuk Hidangan Manis',
+          'Teknik Sangrai & Infusi',
+          NULL,
+          NULL,
           'Chef Basic',
           'basic',
           'Kayu Manis',
@@ -179,6 +238,9 @@ async function setupDatabase() {
         ),
         (
           'Penerapan Andaliman & Asam Gelugur pada Resep Pilihan',
+          'Resep Luar Negeri Berempah',
+          '2026-11-24',
+          '2026-12-24',
           'Chef Basic',
           'intermediate',
           'Andaliman',
@@ -186,19 +248,28 @@ async function setupDatabase() {
           'Video Pembelajaran Diunggah oleh Admin',
           '/videos/andaliman-asam-gelugur.mp4',
           'active'
-        ),
-        (
-          'Kontrol Panas Pala Banda & Kluwek pada Kuah Berempah',
-          'Chef Basic',
-          'advanced',
-          'Pala',
-          'Studio & Rekaman · Rabu 16:00 WITA',
-          'Menunggu Unggahan Video oleh Admin',
-          NULL,
-          'active'
         )
       ON CONFLICT (title) DO NOTHING;
     `);
+
+    const clsRows = await client.query("SELECT id, title FROM classes ORDER BY id ASC");
+    for (const c of clsRows.rows) {
+      const existingMat = await client.query(
+        "SELECT id FROM class_materials WHERE class_id = $1 LIMIT 1",
+        [c.id]
+      );
+      if (existingMat.rows.length === 0) {
+        await client.query(
+          `
+          INSERT INTO class_materials (class_id, order_index, title, content_body)
+          VALUES
+            ($1, 1, 'Pengenalan Karakter & Seleksi Rempah', 'Pelajari aroma, bagian tanaman, serta cara memilih rempah khas Indonesia sebelum diolah.'),
+            ($1, 2, 'Teknik Pengolahan & Penerapan Resep', 'Ikuti panduan sangrai/infusi/penambahan rempah pada tahapan tepat serta saksikan rekaman penuh kelas studio.')
+          `,
+          [c.id]
+        );
+      }
+    }
 
     await client.query("COMMIT");
     console.log("Setup database Niskala Rasa berhasil.");
