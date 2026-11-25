@@ -1,282 +1,242 @@
-import bcrypt from "bcryptjs";
-import pool from "../src/lib/db.js";
-import { SPICES_50_DATASET } from "../src/lib/spices-data.js";
+import fs from 'fs';
+import path from 'path';
+import pg from 'pg';
+import * as recipesModule from '../database/recipes-data.js';
+
+const RECIPES_LIST =
+  recipesModule.RECIPES_DATASET ||
+  recipesModule.recipes ||
+  recipesModule.RECIPES ||
+  recipesModule.default ||
+  Object.values(recipesModule).find((val) => Array.isArray(val)) ||
+  [];
+
+function getDatabaseUrl() {
+  if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+  for (const envFile of ['.env.local', '.env']) {
+    const fullPath = path.join(process.cwd(), envFile);
+    if (fs.existsSync(fullPath)) {
+      const content = fs.readFileSync(fullPath, 'utf8');
+      const match = content.match(/^DATABASE_URL\s*=\s*["']?(.+?)["']?\s*$/m);
+      if (match) return match[1].trim();
+    }
+  }
+  return null;
+}
+
+const SCHEMA_SQL = `
+DROP TABLE IF EXISTS lesson_progress CASCADE;
+DROP TABLE IF EXISTS enrollments CASCADE;
+DROP TABLE IF EXISTS recipes CASCADE;
+DROP TABLE IF EXISTS classes CASCADE;
+DROP TABLE IF EXISTS students CASCADE;
+DROP TABLE IF EXISTS teachers CASCADE;
+DROP TABLE IF EXISTS admins CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(150) NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(20) NOT NULL CHECK (role IN ('admin', 'teacher', 'student')),
+  status VARCHAR(20) NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected')),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE admins (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER UNIQUE NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  admin_code VARCHAR(50) NOT NULL DEFAULT 'ADM-001',
+  department VARCHAR(100) NOT NULL DEFAULT 'Manajemen Kurikulum & Verifikasi',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE teachers (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER UNIQUE NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  specialization VARCHAR(100) NOT NULL,
+  cv_url TEXT,
+  certificate_url TEXT,
+  verified_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER UNIQUE NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  skill_level VARCHAR(50) NOT NULL DEFAULT 'Pemula Nusantara',
+  joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE classes (
+  id SERIAL PRIMARY KEY,
+  category_name VARCHAR(100) NOT NULL,
+  dish_type VARCHAR(50) UNIQUE NOT NULL CHECK (
+    dish_type IN ('berkuah', 'tidak_berkuah', 'camilan_kering', 'minuman', 'camilan_basah')
+  ),
+  title VARCHAR(200) NOT NULL,
+  recipe_description TEXT NOT NULL,
+  teacher_id INTEGER REFERENCES teachers(id) ON DELETE SET NULL
+);
+
+CREATE TABLE recipes (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(200) NOT NULL,
+  dish_type VARCHAR(50) NOT NULL REFERENCES classes(dish_type) ON DELETE CASCADE,
+  portion_estimate VARCHAR(80),
+  dominant_taste VARCHAR(100),
+  key_spice VARCHAR(120),
+  summary TEXT NOT NULL,
+  spice_technique TEXT,
+  ingredients TEXT,
+  instructions TEXT,
+  video_url TEXT,
+  image_url TEXT,
+  created_by INTEGER REFERENCES users(id) ON DELETE SET NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE enrollments (
+  id SERIAL PRIMARY KEY,
+  student_user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  class_id INTEGER NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
+  enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (student_user_id, class_id)
+);
+
+CREATE TABLE lesson_progress (
+  id SERIAL PRIMARY KEY,
+  student_user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  recipe_id INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+  completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (student_user_id, recipe_id)
+);
+`;
+
+const databaseUrl = getDatabaseUrl();
+const { Pool } = pg;
+const pool = new Pool({ connectionString: databaseUrl });
 
 async function setupDatabase() {
   const client = await pool.connect();
   try {
-    await client.query("BEGIN");
+    console.log('1/4 Membangun ulang 8 tabel PostgreSQL ternormalisasi...');
+    await client.query(SCHEMA_SQL);
 
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS users (
-        id SERIAL PRIMARY KEY,
-        username VARCHAR(100) NOT NULL,
-        email VARCHAR(150) UNIQUE NOT NULL,
-        password_hash TEXT NOT NULL,
-        role VARCHAR(20) NOT NULL DEFAULT 'student',
-        teacher_status VARCHAR(20) NOT NULL DEFAULT 'none',
-        teacher_level VARCHAR(20),
-        cv_info TEXT,
-        professional_license TEXT,
-        approved_at TIMESTAMP,
-        created_at TIMESTAMP DEFAULT NOW()
-      );
-    `);
+    // Sekaligus sinkronkan file database/schema.sql agar selalu rapi
+    fs.writeFileSync(path.join(process.cwd(), 'database', 'schema.sql'), SCHEMA_SQL.trim());
 
-    await client.query(`
-      ALTER TABLE users
-      ADD COLUMN IF NOT EXISTS teacher_level VARCHAR(20),
-      ADD COLUMN IF NOT EXISTS cv_info TEXT,
-      ADD COLUMN IF NOT EXISTS professional_license TEXT;
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS categories (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(100) UNIQUE NOT NULL
-      );
-    `);
-
-    await client.query(`DROP TABLE IF EXISTS spices CASCADE;`);
-    await client.query(`
-      CREATE TABLE spices (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(100) UNIQUE NOT NULL,
-        latin_name VARCHAR(150),
-        plant_part VARCHAR(100),
-        origin_region VARCHAR(120) NOT NULL,
-        dominant_taste VARCHAR(50) NOT NULL,
-        characteristics TEXT,
-        processing_method TEXT NOT NULL
-      );
-    `);
-
-    await client.query(`DROP TABLE IF EXISTS recipes CASCADE;`);
-    await client.query(`
-      CREATE TABLE recipes (
-        id SERIAL PRIMARY KEY,
-        title VARCHAR(150) UNIQUE NOT NULL,
-        origin_country VARCHAR(100) NOT NULL,
-        indonesian_spices TEXT NOT NULL,
-        dominant_taste VARCHAR(50) NOT NULL,
-        summary TEXT NOT NULL
-      );
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS classes (
-        id SERIAL PRIMARY KEY,
-        title VARCHAR(180) UNIQUE NOT NULL,
-        category_name VARCHAR(100) NOT NULL DEFAULT 'Rempah Nusantara',
-        start_date DATE,
-        end_date DATE,
-        teacher_name VARCHAR(120) NOT NULL,
-        teacher_level VARCHAR(20) NOT NULL DEFAULT 'basic',
-        indonesian_spice VARCHAR(120) NOT NULL,
-        schedule_label VARCHAR(120) NOT NULL,
-        recording_status VARCHAR(80) NOT NULL DEFAULT 'Menunggu Unggahan Video oleh Admin',
-        recording_url TEXT,
-        status VARCHAR(20) NOT NULL DEFAULT 'active',
-        created_at TIMESTAMP DEFAULT NOW()
-      );
-    `);
-
-    await client.query(`
-      ALTER TABLE classes
-      ADD COLUMN IF NOT EXISTS category_name VARCHAR(100) DEFAULT 'Rempah Nusantara',
-      ADD COLUMN IF NOT EXISTS start_date DATE,
-      ADD COLUMN IF NOT EXISTS end_date DATE,
-      ADD COLUMN IF NOT EXISTS recording_url TEXT;
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS class_materials (
-        id SERIAL PRIMARY KEY,
-        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
-        order_index INT NOT NULL DEFAULT 1,
-        title VARCHAR(180) NOT NULL,
-        content_body TEXT NOT NULL
-      );
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS class_material_progress (
-        id SERIAL PRIMARY KEY,
-        material_id INT NOT NULL REFERENCES class_materials(id) ON DELETE CASCADE,
-        user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        completed_at TIMESTAMP DEFAULT NOW(),
-        UNIQUE (material_id, user_id)
-      );
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS material_discussions (
-        id SERIAL PRIMARY KEY,
-        material_id INT NOT NULL REFERENCES class_materials(id) ON DELETE CASCADE,
-        sender_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        sender_name VARCHAR(120) NOT NULL,
-        sender_role VARCHAR(20) NOT NULL,
-        comment TEXT NOT NULL,
-        created_at TIMESTAMP DEFAULT NOW()
-      );
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS class_enrollments (
-        id SERIAL PRIMARY KEY,
-        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
-        user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        created_at TIMESTAMP DEFAULT NOW(),
-        UNIQUE (class_id, user_id)
-      );
-    `);
-
-    await client.query(`
-      CREATE TABLE IF NOT EXISTS private_messages (
-        id SERIAL PRIMARY KEY,
-        class_id INT NOT NULL REFERENCES classes(id) ON DELETE CASCADE,
-        sender_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-        sender_name VARCHAR(120) NOT NULL,
-        sender_role VARCHAR(20) NOT NULL,
-        message TEXT NOT NULL,
-        created_at TIMESTAMP DEFAULT NOW()
-      );
-    `);
-
-    await client.query(`
-      INSERT INTO categories (name)
-      VALUES
-        ('Rempah Nusantara'),
-        ('Resep Luar Negeri Berempah'),
-        ('Teknik Sangrai & Infusi'),
-        ('Praktik Studio Makassar')
-      ON CONFLICT (name) DO NOTHING;
-    `);
-
-    const adminPass = await bcrypt.hash("admin123", 10);
-    const teacherPass = await bcrypt.hash("teacher123", 10);
-    const studentPass = await bcrypt.hash("student123", 10);
-    const pendingPass = await bcrypt.hash("pending123", 10);
-
+    console.log('2/4 Mengisi tabel users, admins, teachers, dan students...');
+    const adminUser = await client.query(
+      `INSERT INTO users (full_name, email, password, role, status)
+       VALUES ('Admin Utama Niskala Rasa Indonesia', 'admin@gmail.com', 'admin123', 'admin', 'approved')
+       RETURNING id`
+    );
     await client.query(
-      `
-      INSERT INTO users (
-        username, email, password_hash, role, teacher_status,
-        teacher_level, cv_info, professional_license, approved_at
-      )
-      VALUES
-        ('Admin Niskala', 'admin@niskalarasa.id', $1, 'admin', 'none', NULL, NULL, NULL, NULL),
-        ('Chef Basic', 'teacher@niskalarasa.id', $2, 'teacher', 'approved', 'basic', 'CV Pengajar Dasar Rempah Nusantara (3 tahun)', 'LIS-REMPAH-BASIC-01', NOW()),
-        ('Siswa Rempah', 'student@niskalarasa.id', $3, 'student', 'none', NULL, NULL, NULL, NULL),
-        ('Calon Guru Adv', 'pending@niskalarasa.id', $4, 'student', 'pending', 'advanced', 'CV Spesialis Ekstraksi & Sangrai Rempah (6 tahun)', 'LIS-KULINER-ADV-09', NULL)
-      ON CONFLICT (email) DO NOTHING;
-      `,
-      [adminPass, teacherPass, studentPass, pendingPass]
+      `INSERT INTO admins (user_id, admin_code, department)
+       VALUES ($1, 'ADM-NISKALA-01', 'Kepala Kurikulum & Verifikasi Pengajar')`,
+      [adminUser.rows[0].id]
     );
 
-    for (const spice of SPICES_50_DATASET) {
+    const teachersSeed = [
+      {
+        name: 'Raka Pratama Wijaya Kusuma Putra',
+        email: 'raka@gmail.com',
+        spec: 'Makanan Berkuah',
+        dishType: 'berkuah',
+        classTitle: 'Mastery Hidangan Berkuah & Rempah Nusantara',
+        desc: 'Kuasai teknik ekstraksi kaldu bening, santan pecah terkendali, dan bumbu ulek khas Sumatera hingga Jawa.',
+      },
+      {
+        name: 'Sari Dewi Lestari Putri Andini',
+        email: 'sari@gmail.com',
+        spec: 'Makanan Tidak Berkuah',
+        dishType: 'tidak_berkuah',
+        classTitle: 'Olahan Lauk Kering, Tumis & Bakar Autentik',
+        desc: 'Pelajari teknik ungkep bumbu meresap, sambal Nusantara, dan pengolahan lauk pauk tradisional.',
+      },
+      {
+        name: 'Dimas Aditya Nugraha Pratama Jaya',
+        email: 'dimas@gmail.com',
+        spec: 'Camilan Kering',
+        dishType: 'camilan_kering',
+        classTitle: 'Kue Kering Klasik & Camilan Renyah Tahan Lama',
+        desc: 'Teknik pengovenan kue kering tradisional, penggorengan rempeyek renyah, dan keripik Nusantara.',
+      },
+      {
+        name: 'Maya Kartika Sari Dewi Permata',
+        email: 'maya@gmail.com',
+        spec: 'Minuman',
+        dishType: 'minuman',
+        classTitle: 'Racikan Jamu & Minuman Rempah Tradisional',
+        desc: 'Ekstraksi rimpang, balans gula aren, dan penyajian minuman herbal hangat maupun segar khas Indonesia.',
+      },
+      {
+        name: 'Tari Rahmawati Putri Kusuma Ningrum',
+        email: 'tari@gmail.com',
+        spec: 'Camilan Basah',
+        dishType: 'camilan_basah',
+        classTitle: 'Kue Basah Kukus & Jajanan Pasar Tradisional',
+        desc: 'Seni mengolah tepung ketan, daun suji, santan kental, dan gula merah untuk kue basah autentik.',
+      },
+    ];
+
+    for (const t of teachersSeed) {
+      const uRes = await client.query(
+        `INSERT INTO users (full_name, email, password, role, status)
+         VALUES ($1, $2, 'guru123', 'teacher', 'approved')
+         RETURNING id`,
+        [t.name, t.email]
+      );
+      const tRes = await client.query(
+        `INSERT INTO teachers (user_id, specialization, cv_url, certificate_url, verified_at)
+         VALUES ($1, $2, 'https://example.com/cv-instruktur.pdf', 'https://example.com/sertifikat-koki.pdf', NOW())
+         RETURNING id`,
+        [uRes.rows[0].id, t.spec]
+      );
       await client.query(
-        `
-        INSERT INTO spices (
-          name, latin_name, plant_part, origin_region,
-          dominant_taste, characteristics, processing_method
-        )
-        VALUES ($1, $2, $3, $4, $5, $6, $7)
-        ON CONFLICT (name) DO UPDATE SET
-          latin_name = EXCLUDED.latin_name,
-          plant_part = EXCLUDED.plant_part,
-          origin_region = EXCLUDED.origin_region,
-          dominant_taste = EXCLUDED.dominant_taste,
-          characteristics = EXCLUDED.characteristics,
-          processing_method = EXCLUDED.processing_method;
-        `,
+        `INSERT INTO classes (category_name, dish_type, title, recipe_description, teacher_id)
+         VALUES ($1, $2, $3, $4, $5)`,
+        [t.spec, t.dishType, t.classTitle, t.desc, tRes.rows[0].id]
+      );
+    }
+
+    const studentUser = await client.query(
+      `INSERT INTO users (full_name, email, password, role, status)
+       VALUES ('Putri Lestari Kusuma Wardani', 'putri@gmail.com', 'murid123', 'student', 'approved')
+       RETURNING id`
+    );
+    await client.query(
+      `INSERT INTO students (user_id, skill_level) VALUES ($1, 'Menengah Nusantara')`,
+      [studentUser.rows[0].id]
+    );
+
+    console.log(`3/4 Mengisi ${RECIPES_LIST.length} resep ke tabel recipes...`);
+    for (const r of RECIPES_LIST) {
+      await client.query(
+        `INSERT INTO recipes (
+          title, dish_type, portion_estimate, dominant_taste, key_spice,
+          summary, spice_technique, ingredients, instructions, video_url, created_by
+        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,1)`,
         [
-          spice.name,
-          spice.latin_name,
-          spice.plant_part,
-          spice.origin_region,
-          spice.dominant_taste,
-          spice.characteristics,
-          spice.processing_method,
+          r.title,
+          r.dish_type,
+          r.portion_estimate,
+          r.dominant_taste,
+          r.key_spice,
+          r.summary,
+          r.spice_technique,
+          r.ingredients,
+          r.instructions,
+          r.video_url || 'https://youtu.be/T0F0vClQaWI',
         ]
       );
     }
 
-    await client.query(`
-      INSERT INTO recipes (title, origin_country, indonesian_spices, dominant_taste, summary)
-      VALUES
-        ('Kolak Pisang Kayu Manis Kerinci', 'Indonesia', 'Kayu Manis, Kapulaga', 'manis', 'Hidangan penutup khas Indonesia berkuah santan hangat dengan aroma manis kayu manis dan kapulaga.'),
-        ('Arsik Ikan Mas Andaliman', 'Indonesia', 'Andaliman, Asam Gelugur, Kecombrang (Honje)', 'asam', 'Masakan khas Batak, Indonesia dengan keasaman asam gelugur dan kesegaran pedas-kebas andaliman.'),
-        ('Coto Makassar Rempah Pilihan', 'Indonesia', 'Cengkeh, Pala, Kapulaga, Jintan, Serai (Sereh)', 'pedas', 'Sup daging khas Makassar dengan racikan rempah Nusantara yang gurih hangat dan beraroma kuat.'),
-        ('Rawon Hitam Keluwak', 'Indonesia', 'Kluwek (Kepayang), Kemukus, Cengkeh', 'pahit', 'Sup daging berkuah gelap khas Jawa Timur dengan karakter pahit-gurih keluwak dan kehangatan kemukus.'),
-        ('Spiced Lamb Tagine', 'Maroko', 'Kayu Manis, Cengkeh, Kapulaga', 'manis', 'Rebusan daging domba khas Maroko dengan sentuhan manis hangat kayu manis dan cengkeh asal Indonesia.'),
-        ('Spiced Chai Infusion', 'India', 'Kayu Manis, Kapulaga, Cengkeh, Jahe', 'manis', 'Seduhan teh rempah ala India yang diperkaya kayu manis, kapulaga, dan jahe.'),
-        ('Citrus Herb Poached Fish', 'Yunani', 'Andaliman, Asam Gelugur', 'asam', 'Olahan ikan kuah segar gaya Mediterania dengan sentuhan asam dan aroma khas andaliman Indonesia.'),
-        ('Smoked Pepper & Clove Roast Beef', 'Amerika Serikat', 'Cengkeh, Kemukus, Lada Hitam', 'pedas', 'Daging panggang dengan lapisan bumbu rempah pedas-hangat berbahan cengkeh, kemukus, dan lada hitam.'),
-        ('Warm Nutmeg Cream Sauce', 'Prancis', 'Pala, Fuli (Bunga Pala)', 'pahit', 'Saus krim klasik Prancis dengan sentuhan aroma khas pala dan fuli yang diparut segar.')
-      ON CONFLICT (title) DO NOTHING;
-    `);
-
-    await client.query(`
-      INSERT INTO classes (
-        title, category_name, start_date, end_date, teacher_name, teacher_level,
-        indonesian_spice, schedule_label, recording_status, recording_url, status
-      )
-      VALUES
-        (
-          'Sangrai & Infusi Kayu Manis Kerinci untuk Hidangan Manis',
-          'Teknik Sangrai & Infusi',
-          NULL,
-          NULL,
-          'Chef Basic',
-          'basic',
-          'Kayu Manis',
-          'Studio & Rekaman · Sabtu 09:00 WITA',
-          'Video Pembelajaran Diunggah oleh Admin',
-          '/videos/kayu-manis-kerinci.mp4',
-          'active'
-        ),
-        (
-          'Penerapan Andaliman & Asam Gelugur pada Resep Pilihan',
-          'Resep Luar Negeri Berempah',
-          '2026-11-24',
-          '2026-12-24',
-          'Chef Basic',
-          'intermediate',
-          'Andaliman',
-          'Studio & Rekaman · Minggu 13:00 WITA',
-          'Video Pembelajaran Diunggah oleh Admin',
-          '/videos/andaliman-asam-gelugur.mp4',
-          'active'
-        )
-      ON CONFLICT (title) DO NOTHING;
-    `);
-
-    const clsRows = await client.query("SELECT id, title FROM classes ORDER BY id ASC");
-    for (const c of clsRows.rows) {
-      const existingMat = await client.query(
-        "SELECT id FROM class_materials WHERE class_id = $1 LIMIT 1",
-        [c.id]
-      );
-      if (existingMat.rows.length === 0) {
-        await client.query(
-          `
-          INSERT INTO class_materials (class_id, order_index, title, content_body)
-          VALUES
-            ($1, 1, 'Pengenalan Karakter & Seleksi Rempah', 'Pelajari aroma, bagian tanaman, serta cara memilih rempah khas Indonesia sebelum diolah.'),
-            ($1, 2, 'Teknik Pengolahan & Penerapan Resep', 'Ikuti panduan sangrai/infusi/penambahan rempah pada tahapan tepat serta saksikan rekaman penuh kelas studio.')
-          `,
-          [c.id]
-        );
-      }
-    }
-
-    await client.query("COMMIT");
-    console.log("Setup database Niskala Rasa berhasil.");
-  } catch (error) {
-    await client.query("ROLLBACK");
-    console.error("Gagal setup database:", error);
-    process.exitCode = 1;
+    console.log('4/4 SUKSES! Seluruh 8 tabel ternormalisasi berhasil dibuat & diisi.');
+  } catch (err) {
+    console.error('Error setup-db:', err);
   } finally {
     client.release();
     await pool.end();
