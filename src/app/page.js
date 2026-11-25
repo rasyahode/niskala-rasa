@@ -290,10 +290,6 @@ export default function HomePage() {
         <section className="relative overflow-hidden rounded-3xl border border-[#dfe7dc] bg-white p-8 shadow-2xs sm:p-12">
           <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
             <div className="space-y-5 lg:col-span-7">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#d6e2d3] bg-[#eef5ed] px-3.5 py-1 text-xs font-bold tracking-wider text-[#435e41] uppercase">
-                <span className="h-2 w-2 rounded-full bg-[#557153]" />
-                Akademi Kuliner Nusantara
-              </span>
 
               <h1 className="text-3xl leading-tight font-bold tracking-tight text-[#1a2820] sm:text-4xl">
                 Kuasai Teknik & Rahasia Rempah Autentik Bersama Niskala Rasa
