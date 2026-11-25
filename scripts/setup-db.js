@@ -213,12 +213,50 @@ async function setupDatabase() {
     );
 
     console.log(`3/4 Mengisi ${RECIPES_LIST.length} resep ke tabel recipes...`);
+    const recipesImgDir = path.join(process.cwd(), 'public', 'images', 'recipes');
+    const recipeImgFiles = fs.existsSync(recipesImgDir)
+      ? fs.readdirSync(recipesImgDir)
+      : [];
+    const normImgKey = (raw) =>
+      String(raw || '')
+        .toLowerCase()
+        .replace(/\.(png|jpe?g|webp)$/i, '')
+        .replace(/&/g, ' dan ')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+    const imgLookup = recipeImgFiles.map((file) => ({
+      file,
+      key: normImgKey(file),
+    }));
+    const resolveImageUrl = (recipe) => {
+      if (recipe.image_url) return recipe.image_url;
+      const target = normImgKey(recipe.title);
+      if (!target) return null;
+      const exact = imgLookup.find((item) => item.key === target);
+      if (exact) return `/images/recipes/${exact.file}`;
+      const targetTokens = target.split(/\s+/).filter((t) => t.length > 1);
+      let best = null;
+      let bestScore = 0;
+      for (const item of imgLookup) {
+        const fileTokens = item.key.split(/\s+/).filter((t) => t.length > 1);
+        const overlap = targetTokens.filter((t) => fileTokens.includes(t)).length;
+        const bonus =
+          item.key.includes(target) || target.includes(item.key) ? 2 : 0;
+        const score = overlap + bonus;
+        if (score > bestScore) {
+          bestScore = score;
+          best = item;
+        }
+      }
+      return best && bestScore >= 1 ? `/images/recipes/${best.file}` : null;
+    };
+
     for (const r of RECIPES_LIST) {
       await client.query(
         `INSERT INTO recipes (
           title, dish_type, portion_estimate, dominant_taste, key_spice,
-          summary, spice_technique, ingredients, instructions, video_url, created_by
-        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,1)`,
+          summary, spice_technique, ingredients, instructions, video_url, image_url, created_by
+        ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,1)`,
         [
           r.title,
           r.dish_type,
@@ -230,6 +268,7 @@ async function setupDatabase() {
           r.ingredients,
           r.instructions,
           r.video_url || 'https://youtu.be/T0F0vClQaWI',
+          resolveImageUrl(r),
         ]
       );
     }
