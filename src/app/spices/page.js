@@ -151,7 +151,7 @@ export default async function SpicesPage({ searchParams }) {
                             href="/learning-space"
                             className="text-xs font-semibold text-emerald-700 hover:underline"
                         >
-                            Buka Ruang Belajar →
+                            Buka Ruang Belajar
                         </Link>
                     </div>
 
@@ -274,7 +274,7 @@ export default async function SpicesPage({ searchParams }) {
                                     href="/login"
                                     className="inline-block font-semibold text-emerald-800 underline hover:text-emerald-950"
                                 >
-                                    Daftar sebagai murid untuk melihat resep lengkap →
+                                    Daftar sebagai murid untuk melihat resep lengkap
                                 </Link>
                             </div>
                         ) : (
@@ -283,7 +283,7 @@ export default async function SpicesPage({ searchParams }) {
                                     href="/recipes"
                                     className="inline-block font-semibold text-emerald-800 underline hover:text-emerald-950"
                                 >
-                                    Buka resep lengkap &amp; langkah memasak →
+                                    Buka resep lengkap &amp; langkah memasak
                                 </Link>
                             </div>
                         )}
